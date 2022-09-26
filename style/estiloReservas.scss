@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&display=swap');
+
+$font: 'Aref Ruqaa Ink', serif;
+
+@mixin estiloInputs{
+    background: #aaa;
+    border: none;
+    outline: none;
+    padding-left: 0.8em;
+    border-radius: 10px;
+    transition: all .4s;
+    font-family: $font;
+}
+
+@mixin placeholder{
+    &::placeholder{
+        font-family: 'Aref Ruqaa Ink', serif;
+        color: #fff;
+    }
+    &:focus::placeholder{
+        transition: all .4s;
+        color: #000;
+    }
+}
+
+@mixin  buttons {
+    display: block;
+    margin: {
+      bottom: 15px;
+      top: 5px;
+    }
+    padding: 8px;
+    padding-top: 2px;
+    background: linear-gradient(to bottom, #ff416c, #ff4b2b, #f59426);
+    border-radius: 25px;
+    color: #fff;
+    text: {
+      decoration: none;
+      weight: 700;
+    }
+    font-family: $font;
+
+    &:hover{
+      background: #fff;
+      color: #ff416c;
+      border: solid 1px #aaa;
+      cursor: pointer;
+    }
+}
+
+html{
+    overflow-x: hidden;
+}
+
+form{
+    padding: 1rem;
+    padding-top: 15vh;
+    margin: 0.5rem;
+    font-family: $font;
+
+    h1{
+        font-size: 22pt;
+    }
+
+    fieldset{
+        border: none;
+        outline: none;
+        margin-bottom: 3rem;
+
+        h3{
+            font-size: 18pt;
+        }
+    }
+
+    .sedesGroups{
+        display: grid;
+        grid-template:  30vh 30vh / 1fr 1fr 1fr;
+        grid-gap: 1.8rem;
+
+        .sede {
+        text-align: center;
+        font-family: $font;
+
+        input{
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        input + label{
+            cursor: pointer;
+            font-size: 15pt;
+        }
+
+        label img{
+            width: 85%;
+            height: 100%;
+
+            &:hover{
+                border: solid 2px #000;
+            }
+        }
+        input[type=radio]:checked + label img{
+            filter: brightness(120%);
+            border: solid 4px #000;
+        }
+        }
+    }
+    .quartos{
+        padding: 1rem;
+        select{
+            @include estiloInputs;
+            width: 30%;
+            font-size: 18pt;
+        }
+    }
+    .qtdPessoas{
+        width: 70%;
+        padding: 1rem;
+        input[type="number"] {
+            @include estiloInputs;
+            @include placeholder;
+            font-size: 15pt;
+            width: 25%;
+            padding: 0.5rem;
+        }
+    }
+
+    .datas{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+
+        > div {
+        margin-right: 3rem;
+
+        label{
+            font-size: 16pt;
+        }
+
+        input{
+            @include estiloInputs;
+            font-size: 15pt;
+            padding: 0.5rem;
+        }}
+    }
+    button{
+        @include buttons;
+        font-family: $font;
+        border: none;
+        outline: none;
+        font-size: 2rem;
+    }
+
+}

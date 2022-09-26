@@ -1,0 +1,173 @@
+@import url('https://unicons.iconscout.com/release/v2.1.9/css/unicons.css');  
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&display=swap');
+
+@mixin checkboxes{
+    position: relative;  
+    display: block;  
+    text-align: center;  
+    width: 60px;  
+    height: 16px;  
+    border-radius: 8px;  
+    padding: 0;  
+    margin: 10px auto;  
+    cursor: pointer;  
+    background-color: transparent;
+    border: solid 3px #ff416c;
+}
+@mixin checkboxes-before{
+    position: absolute;  
+    display: block;  
+    width: 36px;  
+    height: 36px;  
+    border-radius: 50%;  
+    color: #fff;  
+    background: linear-gradient(to bottom right, #ff416c, #ff416c, #ff4b2b, #ff4b2b, #f59426);  
+    font-family: 'unicons';  
+    content: '\eb4f';  
+    z-index: 20;  
+    top: -10px;  
+    left: -10px;  
+    line-height: 36px;  
+    text-align: center;  
+    font-size: 24px;  
+    transition: all 0.5s ease;
+}
+
+@mixin cards{
+    width: 100%;  
+    height: 100%;  
+    background: {
+           color: #aaa; 
+           position: bottom center;
+           repeat: no-repeat;
+           size: 300%;
+    } 
+    position: absolute;  
+    border-radius: 20px;  
+    left: 0;  
+    top: 0;  
+    -webkit-transform-style: preserve-3d;  
+    transform-style: preserve-3d;  
+    -webkit-backface-visibility: hidden;  
+    -moz-backface-visibility: hidden;  
+    -o-backface-visibility: hidden;  
+    backface-visibility: hidden;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    background: url("../backgrounds/flat-lay-yellow-luggage-with-copy-space.jpg");  
+    background: {
+        size: cover;
+        repeat: no-repeat;}
+    font: {
+        family: 'Aref Ruqaa Ink', serif;  
+        weight: 300; }   
+
+    a {  
+        cursor: pointer;  
+        transition: color 0.3s ease-in-out; } 
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        font-weight: 500;  
+        font-size: 14px;  
+        line-height: 1.7;
+    }
+    h2{
+        font-weight: 700;
+        margin: 0;
+        span {
+            padding: 0 20px;
+            text-transform: uppercase;  
+            letter-spacing: 1.5px;
+        }
+    }
+    .section{
+        position: relative;  
+        width: 100%;  
+        display: block; 
+    }
+    .full-height{
+        min-height: 100vh;
+    }
+}
+[type="checkbox"]:checked,  
+[type="checkbox"]:not(:checked){
+    position: absolute;  
+    left: -9999px;
+}
+.checkbox:checked + label{
+    @include checkboxes;
+
+    &:before{
+        @include checkboxes-before;
+    }
+}
+ .checkbox:not(:checked) + label{
+    @include checkboxes;
+
+    &:before{
+        @include checkboxes-before;
+        transform: translateX(44px) rotate(-270deg);
+    }
+}
+.card{
+    &-3d-wrap{
+        position: relative;  
+        width: 570px;  
+        max-width: 100%;  
+        height: 480px;  
+        -webkit-transform-style: preserve-3d;  
+        transform-style: preserve-3d;  
+        perspective: 800px;  
+        margin-top: 40px;  
+    }
+    &-3d-wrapper{
+        width: 100%;  
+        height: 100%;  
+        position:absolute;    
+        top: 0;  
+        left: 0;   
+        -webkit-transform-style: preserve-3d;  
+        transform-style: preserve-3d;  
+        transition: all 600ms ease-out; 
+    }
+    &-front{
+        @include cards;
+    }
+    &-back{
+        @include cards;
+        transform: rotateY(180deg);
+    }
+}
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {  
+    transform: rotateY(180deg);  
+}  
+   .center-wrap{  
+    position: absolute;  
+    width: 100%;  
+    height: 95%;
+    padding: 0 25px;  
+    top: 50%;  
+    left: 0;  
+    transform: translate3d(0, -50%, 35px) perspective(100px);  
+    z-index: 20;  
+    display: block;  
+    
+    iframe{
+        width: 95%;
+        height: 90%;
+        border: none;
+        outline: none;
+    }
+}  
