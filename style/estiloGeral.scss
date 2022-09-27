@@ -383,4 +383,19 @@ $font: 'Aref Ruqaa Ink', serif;
       flex-direction: column;
       align-items: stretch;
     }
+
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .contact-img {
+      min-width: 100%;
+    }
+    .form-container{
+      min-width: 100%;
+    }
+    button{
+      font-size: 2rem;
+    }
 }
