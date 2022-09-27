@@ -124,8 +124,7 @@ body{
 .card{
     &-3d-wrap{
         position: relative;  
-        width: 570px;  
-        max-width: 100%;  
+        width: 570px;    
         height: 480px;  
         -webkit-transform-style: preserve-3d;  
         transform-style: preserve-3d;  
@@ -171,3 +170,13 @@ body{
         outline: none;
     }
 }  
+
+@media (max-width: 768px){
+    .container{
+        max-width: 100%;
+    }
+    .card-3d-wrap{
+        max-width: 450px;
+        min-height: 500px;
+    }
+}
