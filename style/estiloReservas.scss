@@ -72,9 +72,16 @@ form{
         }
     }
 
+    .resume{
+        border: solid 1px #aaa;
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 20px;
+    }
+
     .sedesGroups{
         display: grid;
-        grid-template:  30vh 30vh / 1fr 1fr 1fr;
+        grid-template: repeat(auto-fit, 15rem) / repeat(auto-fill, minmax(30%, 1fr));
         grid-gap: 1.8rem;
 
         .sede {
@@ -145,6 +152,22 @@ form{
             padding: 0.5rem;
         }}
     }
+
+    #preco{
+        margin: 1rem;
+        font-size: 20pt;
+
+        span{
+            font-size: 12pt;
+            font-weight: 400;
+        }
+    }
+
+    .paytype{
+        margin: 1rem;
+        padding: 1rem;
+        font-size: 16pt
+    }
     button{
         @include buttons;
         font-family: $font;
@@ -153,4 +176,16 @@ form{
         font-size: 2rem;
     }
 
+}
+
+@media (max-width: 768px) {
+    select{
+        min-width: 90%;
+    }
+    .qtdPessoas{
+        min-width: 100%;
+        input[type="number"] {
+            min-width: 45%;
+        }
+    }
 }
