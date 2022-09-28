@@ -115,7 +115,7 @@ $font: 'Aref Ruqaa Ink', serif;
 .showcase{
     &-area{
         height: 40vh;
-        background: linear-gradient(rgba(240, 240, 240, 0.144), rgba(255, 255, 255, 0.336)), url("../backgrounds/top-view-tourist-items-arrangement.jpg");
+        background: linear-gradient(rgba(240, 240, 240, 0.144), rgba(255, 255, 255, 0.336)), url("../../backgrounds/top-view-tourist-items-arrangement.jpg");
         background: {
             size: cover;
             position: center;
@@ -360,8 +360,8 @@ $font: 'Aref Ruqaa Ink', serif;
     }
     .logo {
       position: absolute;
-      top: 5px;
-      right: 15px;
+      right: 5em;
+      top: 2px;
       font-size: 2rem;
     }
     .navbar-container input[type="checkbox"]:checked ~ .menu-items {
