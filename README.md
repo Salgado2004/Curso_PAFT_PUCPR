@@ -1,4 +1,4 @@
-# Atividades JavaScript PUCPR
+# Atividades JavaScript PUCPR <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="45" height="45"/>
 Atividades com JavaScript realizadas em sala, do curso Programa de Atração e Formação de Talentos da PUCPR
 
 **O sumário abaixo foi criado para facilitar na navegação entre as atividades**
