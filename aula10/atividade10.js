@@ -73,7 +73,7 @@ function testNum(num) {
     });
  }
  
-testNum(10)
+testNum(12)
     .then(v => console.log(`Número maior que 10 (${v})`))
     .catch(v => console.log(`Número menor que 10 (${v})`))
 
