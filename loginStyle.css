@@ -1,157 +1,52 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
+#logo {
+  margin: 5%;
+  font-size: 32pt;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background-image: url("background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-}
-
-.login-box {
-  margin-top: 15%;
-  width: 40%;
-  padding: 5%;
+#form-container {
   background: linear-gradient(135deg, #505EA5, #8264A4, #8264A4, #B1629B, #B1629B);
-  box-sizing: border-box;
   border-radius: 30px;
-  border-color: #000;
-  border-style: solid;
-  border-width: 2px;
+  border: 2px solid #000000;
+  margin: 15%;
 }
-
-.row {
-  text-align: center;
-  margin-top: -100px;
-}
-
-.login-box img {
-  width: 35%;
-  height: 35%;
-}
-
-.login-box h2 {
-  margin: 0 0 30px;
-  padding: 0;
-  color: #0e153a;
-  text-align: center;
-}
-
-.login-box .user-box {
-  position: relative;
-}
-
-.login-box .user-box input {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 18px;
-  color: #000;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
-}
-
-.login-box .user-box label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #0e153a;
-  font-size: 12px;
-}
-
-.loginbtn {
-  position: relative;
-  display: inline-flex;
-  width: 120px;
-  height: 45px;
-  top: 30px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  transform-style: preserve-3d;
-  transform: translateZ(-25px);
-  transition: transform 0.25s;
-  background: transparent;
-  border: transparent;
-}
-
-span {
-  position: relative;
-  display: inline-flex;
-  width: 120px;
-  height: 45px;
-  top: -17px;
-  left: 60%;
-}
-
-span a {
-  font-size: 12px;
-  letter-spacing: 1px;
-  transform-style: preserve-3d;
-  transform: translateZ(-25px);
-  transition: transform 0.25s;
-}
-
-span a::before,
-span a::after,
-.loginbtn::before,
-.loginbtn::after {
-  height: 45px;
-  width: 100px;
+#form-container form {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  box-sizing: border-box;
-  border-radius: 5px;
+  align-items: center;
 }
-
-.loginbtn::before {
-  position: absolute;
-  content: "LOGIN";
-  color: #fff;
-  background: #000;
-  transform: rotateY(0deg) translateZ(25px);
+#form-container form legend {
+  font-weight: 700;
 }
-
-.loginbtn::after {
-  position: absolute;
-  content: "HIHI >.<";
-  font-weight: bold;
-  color: #000;
-  transform: rotateX(90deg) translateZ(25px);
-  border: 2px solid white;
-  background: #fff;
+#form-container form select {
+  margin: 2%;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 20%;
+  background-color: #d3d3d3;
+  padding: 0.5%;
 }
-
-span a:hover,
-.loginbtn:hover {
-  transform: translateZ(-25px) rotateX(-90deg);
+#form-container form input {
+  margin: 2%;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 60%;
+  background-color: #d3d3d3;
+  padding: 1%;
 }
-
-@media (max-width: 90px) {
-  .login-box {
-    width: 60%;
-  }
-}
-@media (max-width: 700px) {
-  .login-box {
-    width: 70%;
-  }
+#form-container form button {
+  margin: 2%;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #000000;
+  width: 30%;
+  color: #fffffa;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1.8;
+  font-size: 12pt;
+  padding: 1%;
 }/*# sourceMappingURL=loginStyle.css.map */
