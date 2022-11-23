@@ -143,4 +143,15 @@ span a::after,
 span a:hover,
 .loginbtn:hover {
   transform: translateZ(-25px) rotateX(-90deg);
+}
+
+@media (max-width: 90px) {
+  .login-box {
+    width: 60%;
+  }
+}
+@media (max-width: 700px) {
+  .login-box {
+    width: 70%;
+  }
 }/*# sourceMappingURL=loginStyle.css.map */
