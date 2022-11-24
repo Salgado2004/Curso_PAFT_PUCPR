@@ -1,11 +1,30 @@
+h1{
+    margin: {
+        top: 2%;
+        left: 5%;
+    }
+}
+
 #listaExtrato{
-    background-color: turquoise;
     width: 50%;
     float: left;
+    display: flex;
+    justify-content: center;
+
+    div {
+        width: 80%;
+        background-color: #d3d3d3;
+        border-radius: 20px;
+        padding: 5%;
+        margin: {
+            top: 2%;
+            bottom: 2%;
+        };
+        box-shadow: 2px 2px 5px #444;
+    }
 }
 
 #graficoExtrato{
-    background-color: tomato;
     width: 50%;
     float: right;
     display: flex;
