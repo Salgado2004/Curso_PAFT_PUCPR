@@ -63,6 +63,9 @@
 }
 
 @media (max-width: 875px) {
+  #accountSavings #valor {
+    padding: 2%;
+  }
   .navbar {
     opacity: 0.95;
   }

@@ -1,0 +1,29 @@
+#listaExtrato{
+    background-color: turquoise;
+    width: 50%;
+    float: left;
+}
+
+#graficoExtrato{
+    background-color: tomato;
+    width: 50%;
+    float: right;
+    display: flex;
+    justify-content: center;
+
+    #extratoGrafico{
+        background-color: white;
+        border: 2px solid #444;
+        width: 90%;
+        height: 60%;
+    }
+}
+
+@media (max-width: 875px){
+    #listaExtrato{
+        width: 100%;
+    }
+    #graficoExtrato{
+        width: 100%;
+    }
+}
