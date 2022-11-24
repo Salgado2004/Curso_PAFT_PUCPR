@@ -1,5 +1,5 @@
 #logo {
-  margin: 5%;
+  margin: 6%;
   font-size: 32pt;
 }
 
@@ -112,15 +112,17 @@
     transition: transform 0.4s ease-in-out;
   }
   .navbar .menu-items {
-    display: hidden;
+    padding-top: 100px;
     background: #fff;
-    padding: 5%;
-    opacity: 1;
-    width: 100%;
-    transform: translateY(800px);
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(150%);
     display: flex;
     flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
     transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
   }
   .navbar .menu-items li {
     margin-bottom: 1.5rem;
@@ -128,8 +130,7 @@
     font-weight: 500;
   }
   .navbar-container input[type=checkbox]:checked ~ .menu-items {
-    transform: translateY(0);
-    display: visible;
+    transform: translateX(0);
   }
   .navbar-container input[type=checkbox]:checked ~ .hamburger-lines .line1 {
     transform: rotate(35deg);
