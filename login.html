@@ -16,15 +16,15 @@
         <form>
           <legend>Entrar na conta</legend>
           <label for="info">Qual informação você quer usar?</label>
-          <select id="info">
+          <select id="info" required>
             <option value="CPF">CPF</option>
             <option value="Nome">Nome</option>
             <option value="Email">Email</option>
           </select>
           <label for="identification">CPF: </label>
-          <input type="text" id="identification" placeholder="CPF">
+          <input type="text" id="identification" placeholder="CPF" required>
           <label for="password">Senha: </label>
-          <input type="password"  id="password" placeholder="Senha">
+          <input type="password"  id="password" placeholder="Senha" required>
           <button type="submit">Entrar</button>
         </form>
       </div>

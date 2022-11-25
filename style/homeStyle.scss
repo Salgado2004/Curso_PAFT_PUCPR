@@ -52,6 +52,8 @@
             bottom: 5%;
         };
         box-shadow: 2px 2px 5px #333;
+        cursor: pointer;
+        text-decoration: none;
 
         &:hover{
             transform: translate(2px, 2px);
