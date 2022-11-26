@@ -1,0 +1,101 @@
+h1{
+    margin: {
+        top: 2%;
+        left: 5%;
+    }
+}
+
+h2{
+    position: relative;
+    margin: {
+        left: 25%;
+        top: 2%;
+    };
+    font-size: 20pt;
+}
+
+.img{
+    position: relative;
+    margin: {
+        left: 25%;
+        top: 5%;
+    };
+    width: 35%;
+    padding-bottom: 20%;
+    text-align: center;
+    border-radius:  10% 35% 20px 50%;
+    background: linear-gradient(135deg, #505EA5, #8264A4, #8264A4, #B1629B, #B1629B);
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -15px;
+        left: -8px;
+        border-radius:  10% 35% 20px 50%;
+        background-image: url("../imgs/boleto.webp");
+        background-size: cover;
+    }
+}
+
+#deposito form {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    label{
+        font-weight: 500;
+    }
+
+    input[type=text], input[type=date]{
+        font-size: 16pt;
+        font-weight: 100;
+        padding: 0.5%;
+        margin-top: 1%;
+        border-radius: 15px
+    }
+
+    button{
+        background-color: #000000;
+        color: #fffffa;
+        width: 16%;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 1.7;
+        font-size: 16pt;
+        border-radius: 15px;
+        border: 1px solid #000000;
+        padding: 0.5%;
+        margin-top: 2%;
+
+        &:hover{
+            background-color: #fffffa;
+            color: #000000;
+        }
+    }
+}
+
+@media (max-width: 800px){
+    .img{
+        margin: {
+            top: 8%;
+        };
+        width: 50%;
+        padding-bottom: 30%;
+    
+        &::before{
+            top: -15px;
+            left: -8px;
+        }
+    }
+
+    #deposito form {
+    
+        button{
+            width: 50%;
+        }
+    }
+}
