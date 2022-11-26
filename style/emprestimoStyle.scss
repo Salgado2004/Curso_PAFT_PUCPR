@@ -110,3 +110,29 @@ h2{
     }
     }
 }
+
+@media (max-width: 800px){
+    .img{
+        margin: {
+            top: 8%;
+        };
+        width: 50%;
+        padding-bottom: 30%;
+    
+        &::before{
+            top: -15px;
+            left: -8px;
+        }
+    }
+
+    #emprestimo form {
+    
+        button{
+            width: 50%;
+        }
+    }
+
+    .parcelasGroups{
+        width: 80%;
+    }
+}

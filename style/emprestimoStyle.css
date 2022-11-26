@@ -93,4 +93,22 @@ h2 {
 .parcelasGroups .parcela input[type=radio]:checked + label {
   color: #fff;
   background-color: #000;
+}
+
+@media (max-width: 800px) {
+  .img {
+    margin-top: 8%;
+    width: 50%;
+    padding-bottom: 30%;
+  }
+  .img::before {
+    top: -15px;
+    left: -8px;
+  }
+  #emprestimo form button {
+    width: 50%;
+  }
+  .parcelasGroups {
+    width: 80%;
+  }
 }/*# sourceMappingURL=emprestimoStyle.css.map */
