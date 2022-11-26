@@ -78,6 +78,38 @@ h2{
     }
 }
 
+@media (max-height: 700px){
+    h1{
+        margin-top: 1%;;
+    }
+    h2{
+        margin: {
+            top: 0.5%;
+        };
+    }
+    .img{
+        margin: {
+            left: 25%;
+            top: 2%;
+        };
+        width: 25%;
+        padding-bottom: 15%;
+    
+        &::before{
+            top: -15px;
+            left: -8px;
+        }
+    }
+    #deposito form {
+        margin-top: 2%;
+
+        input[type=text], input[type=date]{
+            padding: 0.25%;
+            margin-top: 0.5%;
+        }
+    }
+}
+
 @media (max-width: 800px){
     .img{
         margin: {

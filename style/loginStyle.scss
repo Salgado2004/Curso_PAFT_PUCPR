@@ -56,3 +56,23 @@
     }
   }
 }
+
+@media (max-height: 700px){
+    #logo{
+        margin: 2%;
+    }
+    #form-container{
+        width: 50%;
+        margin-top: 8%;
+        margin-left: 25%;
+    }
+}
+
+@media (max-width: 575px){
+    
+    #form-container{
+        width: 80%;
+        margin-top: 8%;
+        margin-left: 10%;
+    }
+}

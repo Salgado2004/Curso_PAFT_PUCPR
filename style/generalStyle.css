@@ -71,6 +71,13 @@ footer p {
     font-size: 24pt;
   }
 }
+@media (max-height: 700px) {
+  #container {
+    margin-top: 8%;
+    margin-left: 8%;
+    margin-bottom: 1%;
+  }
+}
 @media (max-width: 590px) {
   #container {
     width: 85%;
