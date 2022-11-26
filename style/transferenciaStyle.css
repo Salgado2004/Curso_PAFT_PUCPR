@@ -89,6 +89,9 @@ header h2 #valor {
   #transferencia form fieldset {
     width: 95%;
   }
+  #transferencia form fieldset select {
+    padding: 1%;
+  }
   #transferencia form button {
     width: 50%;
   }
