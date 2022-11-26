@@ -95,9 +95,17 @@ header{
 }
 
 @media (max-width: 600px){
+    header{
+        h2{
+            margin-right: 1%;
+        }
+    }
     #transferencia form{
         fieldset{
-            width: 90%;
+            width: 95%;
+        }
+        button{
+            width: 50%;
         }
     }
 }

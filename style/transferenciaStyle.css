@@ -83,7 +83,13 @@ header h2 #valor {
 }
 
 @media (max-width: 600px) {
+  header h2 {
+    margin-right: 1%;
+  }
   #transferencia form fieldset {
-    width: 90%;
+    width: 95%;
+  }
+  #transferencia form button {
+    width: 50%;
   }
 }/*# sourceMappingURL=transferenciaStyle.css.map */
