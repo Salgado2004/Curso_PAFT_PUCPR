@@ -40,6 +40,12 @@
         
     }
 
+    p{
+        visibility: hidden;
+        color: #f74040;
+        filter: drop-shadow(2px 2px 2px #000);
+    }
+
     button {
         margin: 2%;
         border-radius: 20px;

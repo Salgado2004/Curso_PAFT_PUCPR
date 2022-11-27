@@ -36,6 +36,11 @@
   background-color: #d3d3d3;
   padding: 1%;
 }
+#form-container form p {
+  visibility: hidden;
+  color: #f74040;
+  filter: drop-shadow(2px 2px 2px #000);
+}
 #form-container form button {
   margin: 2%;
   border-radius: 20px;
