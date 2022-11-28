@@ -19,33 +19,35 @@
     <div id="transferencia">
       <form id="transForm" action="transfere" autocomplete="off">
         <label>Informe o valor: </label>
-        <input type="text" placeholder="R$ " required>
+        <input type="number" placeholder="R$ " id="valorTransf" required>
         <fieldset>
             <legend>Dados de quem vai receber: </legend>
             <label>Banco: </label>
-            <input type="text" placeholder="Banco" required>
+            <input type="text" placeholder="Banco"  id="banco" required>
             <div>
                 <label>Agência: </label>
-                <input type="text" placeholder="0000" required>
+                <input type="number" placeholder="0000"  id="agencia" required>
                 <label>Conta: </label>
-                <input type="text" placeholder="0000000-0" required>
+                <input type="text" placeholder="0000000-0"  id="conta" required>
             </div>
+            <legend>Conclusão: </legend>
             <div>
                 <label>Tipo de transação: </label>
-                <select>
+                <select id="tipoDaTransacao" required>
                     <option>PIX</option>
                     <option>TED</option>
                 </select>
                 <label>Pagar quando: </label>
-                <input type="date" placeholder="DD/MM/AAAA" required>
+                <input id="dataTransacao" type="date" placeholder="DD/MM/AAAA" required>
             </div>
             <label>Descrição: (opcional) </label>
-            <textarea placeholder="Descrição"></textarea>
+            <textarea id="descricao"  placeholder="Descrição"></textarea>
         </fieldset>
         <button type="submit">Transferir</button>
       </form>
     </div>
 
     <script src="js/saldo.js"></script>
+    <script src="js/transacoes.js"></script>
   </body>
 </html>
