@@ -12,7 +12,7 @@ Crie um sistema de banco em HTML, CSS e JavaScript.
 
 **Outros requisitos**:
 - [x] O sistema deverá ter um menu sanduiche/hamburger;
-- [ ] Ter pelo menos uma classe (POO) sendo utilizada;
+- [x] Ter pelo menos uma classe (POO) sendo utilizada;
 - [x] Fazer uso de programação assíncrona (primises/async/await);
 - [ ] Fazer uso de TDD (ter pelo menos um teste);
 - [x] Realizar inserção e remoção de elementos no DOM por JS;
