@@ -21,6 +21,23 @@ h1{
             bottom: 2%;
         };
         box-shadow: 2px 2px 5px #444;
+
+        li{
+            list-style:url("../imgs/iconeTransicao.PNG");
+            text-align: start;
+            font-size: 14pt;
+            margin-left: 5%;
+            margin-bottom: 2%;
+            font-weight: 600;
+
+            span{
+                display: block;
+                font-weight: 300;
+                font-size: 11pt;
+                margin-left: 2%;
+                opacity: 0.75;
+            }
+        }
     }
 }
 
