@@ -17,13 +17,15 @@
       <h2>Receba valores de forma simples e gratuita</h2>
     </div> 
     <div id="deposito">
-      <form action="">
+      <form action="deposita" id="deposiForm" autocomplete="off">
         <label>Valor do boleto: </label>
-        <input type="text" placeholder="R$ " required>
+        <input id="valorDeposito" type="number" placeholder="R$ " required>
         <label>Vencimento: </label>
-        <input type="date" placeholder="DD/MM/AAAA" required>
+        <input id="dataVencimento" type="date" placeholder="DD/MM/AAAA" required>
         <button type="submit">Gerar boleto</button>
       </form>
     </div>
+
+    <script src="js/transacoes.js"></script>
   </body>
 </html>

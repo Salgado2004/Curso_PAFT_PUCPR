@@ -11,7 +11,12 @@ const transacao = class {
     }
 
     toString(){
-        return `<li>- R$${this.#valor}<span>${this.#data}</span></li>/n`;
+        if (this.#tipo == "transferencia"){
+            return `<li>- R$${this.#valor}<span>${this.#data}</span></li>/n`;
+        } else{
+            return `<li>+ R$${this.#valor}<span>${this.#data}</span></li>/n`;
+        }
+        
     }
 }
 
@@ -36,7 +41,7 @@ transferencia.onsubmit = async function(e){
     let data = document.querySelector("#dataTransacao").value;
     let agencia = document.querySelector("#agencia").value;
     let conta = document.querySelector("#conta").value;
-    let tipo = document.querySelector("#tipoDaTransacao").value;
+    let tipo = "transferencia";
 
     try{
         valor = await validaValor(valor);
@@ -59,6 +64,32 @@ transferencia.onsubmit = async function(e){
     }
 
     
+}
+
+const deposito = document.querySelector("#deposiForm");
+deposito.onsubmit = async function(e){
+    e.preventDefault();
+
+    let valorDeposito = document.querySelector("#valorDeposito");
+    let dataVencimento = document.querySelector("#dataVencimento");
+    let tipo = "deposito";
+
+    try{
+        data = await validaData(dataVencimento);
+
+        const myMan = new recebedor("Forward Bank", "0101011-1", "0001");
+        const transaction = new transacao(valorDeposito, data, myMan, tipo);
+
+        let transacoes = window.sessionStorage.getItem("transacoes");
+        transacoes += transaction.toString();
+        window.sessionStorage.setItem("transacoes", transacoes);
+
+        let saldo = parseFloat(window.localStorage.getItem("saldo"));
+        saldo += parseFloat(valorDeposito);
+        window.localStorage.setItem("saldo", saldo);
+    } catch(error){
+        console.log(error);
+    }
 }
 
 function validaValor(valor){
