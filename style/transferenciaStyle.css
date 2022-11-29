@@ -29,6 +29,12 @@ header h2 #valor {
   align-items: center;
   width: 100%;
 }
+#transferencia form p {
+  visibility: hidden;
+  color: #f74040;
+  filter: drop-shadow(2px 2px 2px #000);
+  margin: 0.5%;
+}
 #transferencia form label {
   font-weight: 500;
 }

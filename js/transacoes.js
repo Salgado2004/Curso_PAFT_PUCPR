@@ -11,7 +11,7 @@ const transacao = class {
     }
 
     toString(){
-        return `<li>- R$${this.#valor}<span>${this.#data}</span></li>/n`;
+        return `<li>${this.#tipo}<br>- R$${this.#valor}<span>${this.#data}</span></li>/n`;
         
     }
 }
@@ -56,7 +56,9 @@ transferencia.onsubmit = async function(e){
         saldo -= parseFloat(valor);
         window.localStorage.setItem("saldo", saldo);
     } catch(error){
-        console.log(error);
+        let warning = document.querySelector("#error");
+        warning.style.visibility = "visible";
+        warning.innerHTML = error;
     }
 
     

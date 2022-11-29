@@ -39,6 +39,12 @@ h2 {
   align-items: center;
   width: 100%;
 }
+#deposito form p {
+  visibility: hidden;
+  color: #f74040;
+  filter: drop-shadow(2px 2px 2px #000);
+  margin: 0.5%;
+}
 #deposito form label {
   font-weight: 500;
 }
