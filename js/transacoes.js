@@ -10,6 +10,14 @@ const transacao = class {
         this.#tipo = tipo;
     }
 
+    get valor(){
+        return this.#valor;
+    }
+
+    get date(){
+        return this.#data;
+    }
+
     toString(){
         return `<li>${this.#tipo}<br>- R$${this.#valor}<span>${this.#data}</span></li>/n`;
         
@@ -48,12 +56,16 @@ transferencia.onsubmit = async function(e){
         const myMan = new recebedor(banco, conta, agencia);
         const transaction = new transacao(valor, data, myMan, tipo);
 
-        let transacoes = window.sessionStorage.getItem("transacoes");
+        let transacoes = window.localStorage.getItem("transacoes");
         transacoes += transaction.toString();
-        window.sessionStorage.setItem("transacoes", transacoes);
+        window.localStorage.setItem("transacoes", transacoes);
+
+        let grafico = window.localStorage.getItem("graficData");
+        grafico += `${-parseInt(transaction.valor)}<br>`;
+        window.localStorage.setItem("graficData", grafico);
 
         let saldo = parseFloat(window.localStorage.getItem("saldo"));
-        saldo -= parseFloat(valor);
+        saldo -= parseFloat(transaction.valor);
         window.localStorage.setItem("saldo", saldo);
     } catch(error){
         let warning = document.querySelector("#error");

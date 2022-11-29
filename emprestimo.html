@@ -9,6 +9,8 @@
     <link rel="icon" href="imgs/coin.png" type="image/png">
     <link rel="stylesheet" href="style/generalStyle.css">
     <link rel="stylesheet" href="style/emprestimoStyle.css">
+    <link rel="stylesheet" href="style/loaderStyle.css">
+
   </head>
   <body>
     <h1 id="logo">Empréstimo</h1>
@@ -17,38 +19,40 @@
       <h2>Precisando de dinheiro?</h2>
     </div> 
     <div id="emprestimo">
-      <form action="">
+      <form action="emprestar" id="formEmprestimo">
         <label>Valor total do empréstimo: </label>
-        <input type="text" placeholder="R$ " required>
+        <input id="valorEmprestimo" type="number" placeholder="R$ " required>
         <label>Quantas parcelas?</label>
         <div class="parcelasGroups">
           <div class="parcela">
-            <input type="radio" id="36" name="parcelas" required>
+            <input type="radio" id="36" name="parcelas" value="36" required>
             <label for="36">36</label>
           </div>
           <div class="parcela">
-            <input type="radio" id="48" name="parcelas" required>
+            <input type="radio" id="48" name="parcelas" value="48" required>
             <label for="48">48</label>
           </div>
           <div class="parcela">
-            <input type="radio" id="60" name="parcelas" required>
+            <input type="radio" id="60" name="parcelas" value="60" required>
             <label for="60">60</label>
           </div>  
           <div class="parcela">
-            <input type="radio" id="72" name="parcelas" required>
+            <input type="radio" id="72" name="parcelas" value="72" required>
             <label for="72">72</label>
           </div>
           <div class="parcela">
-            <input type="radio" id="84" name="parcelas" required>
+            <input type="radio" id="84" name="parcelas" value="84" required>
             <label for="84">84</label>
           </div>
           <div class="parcela">
-            <input type="radio" id="96" name="parcelas" required>
+            <input type="radio" id="96" name="parcelas" value="96" required>
             <label for="96">96</label>
           </div>
         </div>
         <button type="submit">Simular empréstimo</button>
       </form>
     </div>
+
+    <script src="js/emprestimo.js"></script>
   </body>
 </html>
