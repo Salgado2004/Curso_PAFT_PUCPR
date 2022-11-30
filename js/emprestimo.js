@@ -1,5 +1,22 @@
 const emprestimoForm = document.querySelector("#formEmprestimo");
 
+validateTest("Validando valor 0", () => {
+    assert(validaValor("0"));
+});
+
+validateTest("Validando valor awadwaef", () => {
+    assert(validaValor("awadwaef"));
+});
+
+validateTest("Validando valor 4500", () => {
+    assert(validaValor("4500"));
+});
+
+validateTest("Validando emprestimo", () => {
+    assert(validaEmprestimo("1000", "96"));
+});
+
+
 emprestimoForm.onsubmit = async function(e){
     e.preventDefault();
 
@@ -38,6 +55,16 @@ emprestimoForm.onsubmit = async function(e){
 function assert(isTrue){
     if(!isTrue){
         throw new Error();
+    }
+}
+
+function validateTest(desc,fn){
+    try {
+        fn();
+        console.log("Test passed:"+desc);
+    } catch (error) {
+        console.log("Test fail:"+desc);
+        console.assert(error);
     }
 }
 

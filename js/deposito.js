@@ -61,6 +61,8 @@ deposito.onsubmit = async function(e){
         let saldo = parseFloat(window.localStorage.getItem("saldo"));
         saldo += parseFloat(transaction.valor);
         window.localStorage.setItem("saldo", saldo);
+
+        alert("Depósito realizado");
     } catch(error){
         let warning = document.querySelector("#error");
         warning.style.visibility = "visible";

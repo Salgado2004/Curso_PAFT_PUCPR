@@ -23,7 +23,7 @@ graficData.forEach(fact => {
 
     y = lastOne - parseInt(fact[0]);
     canva.fillStyle = "#8264A4";
-	canva.fillText(`${fact[0]}`, x-13, y-1);
+	canva.fillText(`${fact[0]}`, x-15, y);
 
     canva.lineTo(x, y);
     canva.stroke();

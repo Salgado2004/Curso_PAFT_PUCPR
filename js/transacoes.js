@@ -1,3 +1,15 @@
+validateTest("Validando data 31/10/2022", () => {
+    assert(validaData("2022-10-31"));
+});
+
+validateTest("Validando data 04/12/2025", () => {
+    assert(validaData("2025-12-04"));
+});
+
+validateTest("Validando data 11/12/2022", () => {
+    assert(validaData("2022-12-11"));
+});
+
 const transacao = class {
     #valor;
     #data;
@@ -67,6 +79,8 @@ transferencia.onsubmit = async function(e){
         let saldo = parseFloat(window.localStorage.getItem("saldo"));
         saldo -= parseFloat(transaction.valor);
         window.localStorage.setItem("saldo", saldo);
+
+        alert("Transferência realizada!");
     } catch(error){
         let warning = document.querySelector("#error");
         warning.style.visibility = "visible";
@@ -76,7 +90,21 @@ transferencia.onsubmit = async function(e){
     
 }
 
+function assert(isTrue){
+    if(!isTrue){
+        throw new Error();
+    }
+}
 
+function validateTest(desc,fn){
+    try {
+        fn();
+        console.log("Test passed:"+desc);
+    } catch (error) {
+        console.log("Test fail:"+desc);
+        console.assert(error);
+    }
+}
 
 function validaValor(valor){
     let saldo = parseInt(window.localStorage.getItem("saldo"));

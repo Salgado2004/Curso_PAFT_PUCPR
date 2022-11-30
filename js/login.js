@@ -1,3 +1,41 @@
+validateTest("Validando cpf", () => {
+    assert(validateId("CPF", "12345678"));
+});
+
+validateTest("Validando cpf", () => {
+    assert(validateId("CPF", "12345678910"));
+});
+
+validateTest("Validando nome", () => {
+    assert(validateId("Nome", "joão"));
+});
+
+validateTest("Validando nome", () => {
+    assert(validateId("Nome", "Carlos Sampaio"));
+});
+
+validateTest("Validando email", () => {
+    assert(validateId("Email", "Carlos Sampaio"));
+});
+
+validateTest("Validando email", () => {
+    assert(validateId("Email", "lucas.costa@gmail.com"));
+});
+
+validateTest("Validando senha 12345", () => {
+    assert(validatePass("12345"));
+});
+
+validateTest("Validando senha 'senha'", () => {
+    assert(validatePass("senha"));
+});
+
+validateTest("Validando senha 'z4nBXf#u'", () => {
+    assert(validatePass("z4nBXf#u"));
+});
+
+
+
 const info = document.querySelector("#info");
 
 info.oninput = function(e){
@@ -58,6 +96,22 @@ function validateId(info, text){
             }
     };
 };
+
+function assert(isTrue){
+    if(!isTrue){
+        throw new Error();
+    }
+}
+
+function validateTest(desc,fn){
+    try {
+        fn();
+        console.log("Test passed:"+desc);
+    } catch (error) {
+        console.log("Test fail:"+desc);
+        console.assert(error);
+    }
+}
 
 function validatePass(password){
     if (/^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{8,15}$/.test(password)){
