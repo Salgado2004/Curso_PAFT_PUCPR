@@ -1,4 +1,4 @@
-window.localStorage.getItem("saldo", 0);
+window.localStorage.setItem("saldo", 0);
 
 document.body.onload = function(e){
     const valor = document.querySelector("#valor");
