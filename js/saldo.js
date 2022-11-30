@@ -1,4 +1,6 @@
 window.localStorage.setItem("saldo", 0);
+console.log(localStorage.getItem("saldo"));
+console.log(parseInt(localStorage.getItem("saldo")));
 
 document.body.onload = function(e){
     const valor = document.querySelector("#valor");
