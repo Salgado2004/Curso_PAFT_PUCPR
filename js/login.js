@@ -63,7 +63,7 @@ function validatePass(password){
     if (/^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{8,15}$/.test(password)){
         return password;
     } else{
-        throw "Formato de senha inválido"
+        throw "Senha inválida"
     }
 }
 

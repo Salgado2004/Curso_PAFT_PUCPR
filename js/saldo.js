@@ -1,5 +1,5 @@
 document.body.onload = function(e){
     const valor = document.querySelector("#valor");
-    let saldo = localStorage.getItem("saldo");
-    valor.innerHTML = `R$${saldo}`;
+    let saldo = parseInt(localStorage.getItem("saldo"));
+    valor.innerHTML = `${saldo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
 }
