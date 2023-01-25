@@ -13,13 +13,17 @@ def get_contacts():
 # GET request to retrieve one contacts
 @app.route('/contacts/<int:id>', methods=['get'])
 def get_contact(id):
-    return {'contact': ''}
+    return {'contact': contacts[id-1]}
 
 # POST request to add a new contact with data of the new contact on a json file
 @app.route('/contacts', methods=['POST'])
 def add_contact():
-    #id is created here 
-    return {'contact': ''}
+    if request.method == 'POST':
+        name = request.json['name']
+        tel = request.json['tel']
+        idContact = len(contacts)+1
+        contacts.append({'id': idContact, 'name': name, 'phone': tel})
+    return {'contact': contacts[idContact-1]}
 
 # PUT request to update a contact
 @app.route('/contacts/<int:id>', methods=['PUT'])
