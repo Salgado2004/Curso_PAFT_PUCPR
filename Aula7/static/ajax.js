@@ -12,7 +12,7 @@ document.body.onload = function (){
             <li id="contact${element.id}">
                 <b>Nome</b>: ${element.name} 
                 <b>Telefone</b>: ${element.phone}
-                <button class="delete" id="${element.id}">Apagar</button>
+                <button class="delete" id="${element.id}" onclick="delete_contact(${element.id})">Apagar</button>
                 <button class="edit" id="${element.id}" onclick="edit('${element.id}','${element.name}','${element.phone}')">Editar</button>
             </li>`;
             filter.innerHTML += `
@@ -39,7 +39,7 @@ filter.oninput = function(){
             <li id="contact${json.contact.id}">
                 <b>Nome</b>: ${json.contact.name} 
                 <b>Telefone</b>: ${json.contact.phone}
-                <button class="delete" id="${json.contact.id}">Apagar</button>
+                <button class="delete" id="${json.contact.id}" onclick="delete_contact(${json.contact.id})">Apagar</button>
                 <button class="edit" id="${json.contact.id}" onclick="edit('${json.contact.id}','${json.contact.name}','${json.contact.phone}')">Editar</button>
             </li>`;
         })
@@ -86,7 +86,7 @@ add.onclick = function(){
                 <li id="contact${json.contact.id}">
                     <b>Nome</b>: ${json.contact.name} 
                     <b>Telefone</b>: ${json.contact.phone}
-                    <button class="delete" id="${json.contact.id}">Apagar</button>
+                    <button class="delete" id="${json.contact.id}" onclick="delete_contact(${json.contact.id})">Apagar</button>
                     <button class="edit" id="${json.contact.id}" onclick="edit('${json.contact.id}','${json.contact.name}','${json.contact.phone}')">Editar</button>
                 </li>`;
                 filter.innerHTML += `
@@ -107,7 +107,39 @@ function edit(id, nome, phone){
         <label for="tel"><b>Telefone:</b></label>
         <input type="tel" name="tel" id="tel" placeholder="Telefone" value="${phone}">
         <button type="submit">Salvar contato</button>
+        <button>Cancelar</button>
     </form>
     `;
+
+    formEdit = document.querySelector("#editarContato");
+    formEdit.onsubmit = function(e){
+        e.preventDefault();
+        nomeEditado = document.querySelector("#editarContato #nome").value;
+        telEditado = document.querySelector("#editarContato #tel").value;
+        let url = `http://127.0.0.1:5000/contacts/${id}`;
+        const new_data = {"name": nomeEditado, "tel": telEditado};
+        fetch(url, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(new_data)
+        })
+        .then(response => {
+            if (response.status == 200){
+                window.location.reload()
+            }
+        })
+        .catch(error => console.error(error))
+    }
+}
+
+function delete_contact(id){
+    let url = `http://127.0.0.1:5000/contacts/${id}`;
+    fetch(url, { method: 'DELETE' })
+    .then(response => {
+        if (response.status == 200){
+            window.location.reload()
+        }
+    })
+    .catch(error => console.error(error))
 }
 

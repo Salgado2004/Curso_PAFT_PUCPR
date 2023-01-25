@@ -30,7 +30,7 @@ def add_contact():
                 tel = request.json['tel']
                 idContact = contacts[-1]['id']+1
                 contacts.append({'id': idContact, 'name': name, 'phone': tel})
-                return {'contact': contacts[idContact-1]}, 201
+                return {'contact': contacts[-1]}, 201
             except KeyError:
                 return {'message': 'Bad request'}, 400
     else:
@@ -48,8 +48,8 @@ def update_contact(id):
                 tel = request.json['tel']
                 for contact in contacts:
                     if contact['id'] == id:
-                        contact['name'] = name
-                        contact['tel'] = tel
+                        f_id = contacts.index(contact)
+                        contacts[f_id] = {'id': id, 'name': name, 'phone': tel}
                         return {'message': 'Contato editado'}, 200
                 return {'message': 'Contato não encontrado'}, 404
             except KeyError:
@@ -62,8 +62,7 @@ def update_contact(id):
 def delete_contact(id):
     for contact in contacts:
         if contact['id'] == id:
-            f_id = contacts.index(contact)
-            contacts.remove(f_id)
+            contacts.remove(contact)
             return {'message': 'Contato apagado'}, 200
     return {'message': 'Contato não encontrado'}, 404
 
