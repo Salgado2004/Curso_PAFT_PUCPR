@@ -85,7 +85,7 @@ body #content-lista #filtro label {
   font-family: "Solitreo", cursive;
   font-size: 16pt;
 }
-body #content-lista #filtro select {
+body #content-lista #filtro datalist {
   font-size: 14pt;
   border-radius: 5px;
   outline: none;
@@ -110,7 +110,7 @@ body #content-lista ::-webkit-scrollbar-thumb:hover {
   background: #002652;
 }
 body #content-lista #listaContatos {
-  width: 97%;
+  width: 98%;
   list-style: none;
 }
 body #content-lista #listaContatos .item {
@@ -134,7 +134,7 @@ body #content-lista #listaContatos .item:hover div {
   visibility: visible;
 }
 body #content-lista #listaContatos #editarContato input {
-  width: 25%;
+  width: 24%;
 }
 body #newContact {
   background-color: #98c3ed;

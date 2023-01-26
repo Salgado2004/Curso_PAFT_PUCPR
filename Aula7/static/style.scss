@@ -95,7 +95,7 @@ body{
                 font-family: $font1;
                 font-size: 16pt;
             }
-            select{
+            datalist{
                 font-size: 14pt;
                 border-radius: 5px;
                 outline: none;
@@ -127,7 +127,7 @@ body{
         }
 
         #listaContatos{
-            width: 97%;
+            width: 98%;
             list-style: none;
 
             .item{
@@ -156,10 +156,10 @@ body{
 
             #editarContato{
                 input{
-                    width: 25%;
+                    width: 24%;
                 }
             }
-    }
+        }
     }
 
     #newContact{

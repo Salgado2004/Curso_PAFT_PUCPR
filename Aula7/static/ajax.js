@@ -18,7 +18,7 @@ document.body.onload = function (){
                 </div>
             </li>`;
             filter.innerHTML += `
-                <option value="${element.id}">${element.name}</option>
+                <option id="${element.id}" value="${element.name}">
             `;
         });
     })
@@ -26,12 +26,18 @@ document.body.onload = function (){
 }
 
 filter = document.querySelector("#filterList");
-filter.oninput = function(){
+filtro = document.querySelector("#filter");
+filtro.oninput = function(){
     lista = document.querySelector("#listaContatos");
-    if (filter.value == "all"){
+    if (filtro.value == "all"){
         window.location.reload();
     }else{
-        let url = `http://127.0.0.1:5000/contacts/${filter.value}`;
+        filter.childNodes.forEach(element => {
+            if (element.value == filtro.value){
+                idContato = element.id;
+            }
+        });
+        let url = `http://127.0.0.1:5000/contacts/${idContato}`;
         fetch(url,{
             method:"GET"
         })
@@ -113,7 +119,7 @@ add.onclick = function(){
                     </div>
                     </li>`;
                 filter.innerHTML += `
-                <option value="${json.contact.id}">${json.contact.name}</option>
+                <option id="${element.id}" value="${element.name}">
             `;
             })
             .catch(error => console.error(error))

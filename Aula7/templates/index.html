@@ -16,10 +16,11 @@
             <button id="add">Novo contato</button>
             <h3>Lista de contatos:</h3>
             <div id="filtro">
-                <label for="filterList">Filtrar:</label>
-                <select id="filterList">
+                <label for="filter">Filtrar:</label>
+                <input list="filterList" name="filter" id="filter">
+                <datalist id="filterList">
                     <option value="all"></option>
-                </select>
+                </datalist>
             </div>
             <div id="container">
                 <ul id="listaContatos">
