@@ -42,7 +42,6 @@ body #main-content #subtitle {
 body #content-lista {
   position: relative;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   width: 80%;
   height: 80%;
@@ -67,14 +66,20 @@ body #content-lista #add {
   font-size: 18pt;
   border-radius: 25px;
   color: #fffffa;
+  margin-bottom: 15px;
 }
 body #content-lista #add:hover {
   background-color: #1466c3;
   color: #002652;
+  box-shadow: inset 2px 2px 5px #98c3ed;
 }
 body #content-lista h3 {
   font-family: "Aboreto", cursive;
   margin: 5px;
+}
+body #content-lista #filtro {
+  margin-left: 5px;
+  margin-bottom: 15px;
 }
 body #content-lista #filtro label {
   font-family: "Solitreo", cursive;
@@ -85,6 +90,24 @@ body #content-lista #filtro select {
   border-radius: 5px;
   outline: none;
   font-family: "Times New Roman", Times, serif;
+}
+body #content-lista #container {
+  width: 100%;
+  height: 70%;
+  overflow-y: scroll;
+}
+body #content-lista ::-webkit-scrollbar {
+  width: 15px;
+}
+body #content-lista ::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+body #content-lista ::-webkit-scrollbar-thumb {
+  background: #1466c3;
+  border-radius: 10px;
+}
+body #content-lista ::-webkit-scrollbar-thumb:hover {
+  background: #002652;
 }
 body #content-lista #listaContatos {
   width: 97%;

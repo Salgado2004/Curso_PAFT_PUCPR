@@ -49,7 +49,6 @@ body{
     #content-lista{
         position: relative;
         display: flex;
-        justify-content: center;
         flex-direction: column;
         width: 80%;
         height: 80%;
@@ -74,10 +73,12 @@ body{
             font-size: 18pt;
             border-radius: 25px;
             color: #fffffa;
+            margin-bottom: 15px;
 
             &:hover{
                 background-color: #1466c3;
                 color: #002652;
+                box-shadow:  inset 2px 2px 5px #98c3ed;
             }
         }
 
@@ -87,6 +88,9 @@ body{
         }
 
         #filtro{
+            margin-left: 5px;
+            margin-bottom: 15px;
+
             label{
                 font-family: $font1;
                 font-size: 16pt;
@@ -97,6 +101,29 @@ body{
                 outline: none;
                 font-family: 'Times New Roman', Times, serif;
             }
+        }
+
+        #container{
+            width: 100%;
+            height: 70%;
+            overflow-y: scroll;
+        }
+
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #1466c3; 
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #002652; 
         }
 
         #listaContatos{
