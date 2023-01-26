@@ -9,11 +9,13 @@ document.body.onload = function (){
     .then(json =>{
         json.contacts.forEach(element => {
             lista.innerHTML += `
-            <li id="contact${element.id}">
-                <b>Nome</b>: ${element.name} 
-                <b>Telefone</b>: ${element.phone}
-                <button class="delete" id="${element.id}" onclick="delete_contact(${element.id})">Apagar</button>
-                <button class="edit" id="${element.id}" onclick="edit('${element.id}','${element.name}','${element.phone}')">Editar</button>
+            <li class="item" id="contact${element.id}">
+                <b>Nome:</b> ${element.name} 
+                <b>Telefone:</b> ${element.phone}
+                <div>
+                    <button class="delete" id="${element.id}" onclick="delete_contact(${element.id})"><span class="material-symbols-outlined">delete</span></button>
+                    <button class="edit" id="${element.id}" onclick="edit('${element.id}','${element.name}','${element.phone}')"><span class="material-symbols-outlined">edit</span></button>
+                </div>
             </li>`;
             filter.innerHTML += `
                 <option value="${element.id}">${element.name}</option>
@@ -36,11 +38,13 @@ filter.oninput = function(){
         .then(response => response.json())
         .then(json =>{
             lista.innerHTML = `
-            <li id="contact${json.contact.id}">
-                <b>Nome</b>: ${json.contact.name} 
-                <b>Telefone</b>: ${json.contact.phone}
-                <button class="delete" id="${json.contact.id}" onclick="delete_contact(${json.contact.id})">Apagar</button>
-                <button class="edit" id="${json.contact.id}" onclick="edit('${json.contact.id}','${json.contact.name}','${json.contact.phone}')">Editar</button>
+            <li class="item" id="contact${json.contact.id}">
+                <b>Nome:</b> ${json.contact.name} 
+                <b>Telefone:</b> ${json.contact.phone}
+                <div>
+                    <button class="delete" id="${json.contact.id}" onclick="delete_contact(${json.contact.id})"><span class="material-symbols-outlined">delete</span></button>
+                    <button class="edit" id="${json.contact.id}" onclick="edit('${json.contact.id}','${json.contact.name}','${json.contact.phone}')"><span class="material-symbols-outlined">edit</span></button>
+                </div>
             </li>`;
         })
         .catch(error => console.error(error))
@@ -50,17 +54,32 @@ filter.oninput = function(){
 add = document.querySelector("#add");
 add.onclick = function(){
     form = document.querySelector("#newContact");
+    form.style.display = "block";
+    document.querySelector("#main-content").style.filter = "blur(3px)"
     form.innerHTML = `
+    <button id="fechar"><span class="material-symbols-outlined">close</span></button>
     <form id="novoContato" action="/contacts" method="POST"><br>
         <fieldset>
             <label for="nome">Nome do novo contato:</label>
             <input type="text" name="nome" id="nome" placeholder="Nome">
             <label for="tel">Telefone:</label>
             <input type="tel" name="tel" id="tel" placeholder="Telefone">
-            <button type="submit">Salvar novo contato</button>
+            <button type="submit" id="submit">Salvar novo contato</button>
         </fieldset>
     </form>
     `;
+
+    fecharJanela = document.querySelector("#fechar");
+    fecharJanela.onclick = function(e){
+        janela = document.querySelector("#newContact");
+        form = document.querySelector("#novoContato");
+        main = document.querySelector("#main-content");
+
+        main.style.filter = "blur(0)";
+        janela.style.display = "none";
+        novo.disabled = false;
+        form.reset();
+    }
 
     novoContato = document.querySelector("#novoContato");
     novoContato.onsubmit = function(e){
@@ -69,6 +88,8 @@ add.onclick = function(){
         tel = document.querySelector("#novoContato #tel").value;
         form = document.querySelector("#newContact");
         form.innerHTML = "";
+        document.querySelector("#main-content").style.filter = "blur(0px)";
+        form.style.display = "none";
 
         if (nome != null && tel != null){
             let url = `http://127.0.0.1:5000/contacts`;
@@ -83,12 +104,14 @@ add.onclick = function(){
             .then(response => response.json())
             .then(json =>{
                 lista.innerHTML += `
-                <li id="contact${json.contact.id}">
-                    <b>Nome</b>: ${json.contact.name} 
-                    <b>Telefone</b>: ${json.contact.phone}
-                    <button class="delete" id="${json.contact.id}" onclick="delete_contact(${json.contact.id})">Apagar</button>
-                    <button class="edit" id="${json.contact.id}" onclick="edit('${json.contact.id}','${json.contact.name}','${json.contact.phone}')">Editar</button>
-                </li>`;
+                <li class="item" id="contact${json.contact.id}">
+                    <b>Nome:</b> ${json.contact.name} 
+                    <b>Telefone:</b> ${json.contact.phone}
+                    <div>
+                        <button class="delete" id="${json.contact.id}" onclick="delete_contact(${json.contact.id})"><span class="material-symbols-outlined">delete</span></button>
+                        <button class="edit" id="${json.contact.id}" onclick="edit('${json.contact.id}','${json.contact.name}','${json.contact.phone}')"><span class="material-symbols-outlined">edit</span></button>
+                    </div>
+                    </li>`;
                 filter.innerHTML += `
                 <option value="${json.contact.id}">${json.contact.name}</option>
             `;
@@ -106,8 +129,8 @@ function edit(id, nome, phone){
         <input type="text" name="nome" id="nome" placeholder="Nome" value="${nome}">
         <label for="tel"><b>Telefone:</b></label>
         <input type="tel" name="tel" id="tel" placeholder="Telefone" value="${phone}">
-        <button type="submit">Salvar contato</button>
-        <button>Cancelar</button>
+        <button type="submit"><span class="material-symbols-outlined">done</span></button>
+        <button><span class="material-symbols-outlined">close</span></button>
     </form>
     `;
 

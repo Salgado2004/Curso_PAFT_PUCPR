@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+$font1: 'Solitreo', cursive;
+$font2: 'Aboreto', cursive;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #d9d5d5;
+
+    #main-content{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #1466c3;
+        width: 550px;
+        height: 550px;
+        padding: 10px;
+        transform: translate(0, 25%);
+        border-radius: 25px;
+        box-shadow: 6px 8px 5px #002652;
+
+        #title{
+            text-align: center;
+            font-family: $font1;
+            font-size: 35pt;
+            color: #afcdea;
+            filter: drop-shadow(2px 2px 0px #ffffff);
+        }
+
+        #subtitle{
+            text-align: center;
+            font-family: $font2;
+            font-size: 20pt;
+            color: #afcdea;
+        }
+    }
+
+    #content-lista{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+        height: 80%;
+        padding: 5px;
+        margin: 5px;
+        background-color: #fffffa;
+        border: {
+            radius: 25px;
+            color: #98c3ed;
+            style: dashed;
+            width: 3px;
+        };
+
+        #add{
+            position: relative;
+            background-color:#98c3ed;
+            width: fit-content;
+            font-family: $font1;
+            padding: 8px;
+            border: none;
+            outline: none;
+            font-size: 18pt;
+            border-radius: 25px;
+            color: #fffffa;
+
+            &:hover{
+                background-color: #1466c3;
+                color: #002652;
+            }
+        }
+
+        h3{
+            font-family: $font2;
+            margin: 5px;
+        }
+
+        #filtro{
+            label{
+                font-family: $font1;
+                font-size: 16pt;
+            }
+            select{
+                font-size: 14pt;
+                border-radius: 5px;
+                outline: none;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        }
+
+        #listaContatos{
+            width: 97%;
+            list-style: none;
+
+            .item{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 3px;
+                border-radius: 5px;
+                
+                b{
+                    font-family: $font1;
+                    font-size: 14pt;
+                }
+
+                div {
+                    visibility: hidden;
+                }
+
+                &:hover{
+                    background-color: #afcdea;
+                    div {
+                        visibility: visible;
+                    }
+                }
+            }
+
+            #editarContato{
+                input{
+                    width: 25%;
+                }
+            }
+    }
+    }
+
+    #newContact{
+        background-color: #98c3ed;
+        width: 500px;
+        z-index: 1;
+        padding: 5px;
+        transform: translate(0, -100%);
+        border-radius: 25px;
+        display: none;
+
+        #fechar{
+            position: relative;
+            margin: {
+                top: 5px;
+                right: 5px;
+            }
+            float: right;
+            padding: 3px;
+            color: #1466c3;
+            border-radius: 10px;
+            background: transparent;
+            border: none;
+            outline: none;
+
+            &:hover{
+                background-color: #1466c3;
+                color: #002652;
+            }
+        }
+
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            border: 2.5px dashed #002652;
+            border-radius: 25px;
+            padding: 5px;
+            width: 485px;
+
+            input, label{
+                font-family: $font1;
+                font-size: 16pt;
+                margin: {
+                    bottom: 5px;
+                    left: 8px;
+                }
+                outline: none;
+            }
+
+            #submit{
+                position: relative;
+                background-color:#fffffa;
+                font-family: $font1;
+                padding: 2px;
+                margin-left: 5px;
+                border: none;
+                outline: none;
+                font-size: 18pt;
+                border-radius: 15px;
+                color: #1466c3;
+
+                &:hover{
+                    background-color: #afcdea;
+                    box-shadow: 1px 1px 5px #002652;
+                }
+            }
+        }
+    }
+}

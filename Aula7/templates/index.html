@@ -5,22 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo crud com api</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
-    <h1>Crud com API</h1>
-    <hr>
-    <button id="add">Novo contato</button>
-    <div id="newContact">
-        
+    <div id="main-content">
+        <h1 id="title">Lista telefônica</h1>
+        <h3 id="subtitle">CRUD com api</h3>
+        <div id="content-lista">
+            <button id="add">Novo contato</button>
+            <h3>Lista de contatos:</h3>
+            <div id="filtro">
+                <label for="filterList">Filtrar:</label>
+                <select id="filterList">
+                    <option value="all"></option>
+                </select>
+            </div>
+            <ul id="listaContatos">
+                
+            </ul>
+        </div>
     </div>
-    <h3>Lista de contatos:</h3>
-    <label for="filterList">Filtrar:</label>
-    <select id="filterList">
-        <option value="all"></option>
-    </select>
-    <ul id="listaContatos">
-        
-    </ul>
+    <div id="newContact">
+                
+    </div>
     <script src="../static/ajax.js"></script>
 </body>
 </html>
