@@ -81,7 +81,7 @@ add.onclick = function(){
         form = document.querySelector("#novoContato");
         main = document.querySelector("#main-content");
 
-        main.style.filter = "blur(0)";
+        main.style.filter = "";
         janela.style.display = "none";
         novo.disabled = false;
         form.reset();
