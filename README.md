@@ -8,7 +8,7 @@ Atividades realizadas para o Programa de Atração e Formação de Talentos da P
 <table>
     <tr>
         <td><b>Aula 5</b></td>
-        <td>Teste inicial do Flask e treino de criação de Api</td>
+        <td>Teste inicial do Flask e treino de criação de API</td>
     </tr>
     <tr>
         <td><b>Aula 7</b></td>
@@ -17,5 +17,9 @@ Atividades realizadas para o Programa de Atração e Formação de Talentos da P
     <tr>
         <td><b>Aula 10</b></td>
         <td>Teste da biblioteca Axios para requisição da API</td>
+    </tr>
+    <tr>
+        <td><b>Aula 11</b></td>
+        <td>Continuação da aula 7, com aplicação do banco de dados SQLite</td>
     </tr>
 </table>
