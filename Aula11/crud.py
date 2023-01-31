@@ -1,21 +1,32 @@
+import sqlite3
 from flask import Flask, jsonify, request, render_template
 app = Flask(__name__)
 
-contacts = [{'id': 1, 'name': 'John Doe', 
-'phone': '555-555-5555'},{'id': 2, 'name': 'Steve Tyler', 
-'phone': '888-888-8888'}]
+def get_db_connection():
+    conn = sqlite3.connect('database.db')
+    conn.row_factory = sqlite3.Row
+    return conn
 
 # GET request to retrieve all contacts
 @app.route('/contacts', methods=['GET'])
 def get_contacts():
-    return {'contacts': contacts}, 200
+    conn = get_db_connection()
+    contacts = conn.execute('SELECT * FROM contacts').fetchall()
+    conn.close()
+    contact_list = []
+    for contact in contacts:
+        contact_list.append( {'id': contact['id'], 'name': contact['name_contact'], 'phone': contact['phone']})
+    return {'contacts': contact_list}, 200
 
 # GET request to retrieve one contacts
 @app.route('/contacts/<int:id>', methods=['get'])
 def get_contact(id):
+    conn = get_db_connection()
+    contacts = conn.execute('SELECT * FROM contacts').fetchall()
+    conn.close()
     for contact in contacts:
         if contact['id'] == id:
-            return {'contact': contact}, 200
+            return {'contact': {'id': contact['id'], 'name': contact['name_contact'], 'phone': contact['phone']}}, 200
     return {'message': 'Contato não encontrado'}, 404
 
 # POST request to add a new contact with data of the new contact on a json file
