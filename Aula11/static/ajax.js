@@ -94,7 +94,7 @@ add.onclick = function(){
         tel = document.querySelector("#novoContato #tel").value;
         form = document.querySelector("#newContact");
         form.innerHTML = "";
-        document.querySelector("#main-content").style.filter = "blur(0px)";
+        document.querySelector("#main-content").style.filter = "";
         form.style.display = "none";
 
         if (nome != null && tel != null){
@@ -131,7 +131,7 @@ function edit(id, nome, phone){
     contato = document.querySelector(`#contact${id}`);
     contato.innerHTML = `
     <form id="editarContato" action="/contacts" method="PUT">
-        <label for="nome"><b>Nome:</b.</label>
+        <label for="nome"><b>Nome:</b></label>
         <input type="text" name="nome" id="nome" placeholder="Nome" value="${nome}">
         <label for="tel"><b>Telefone:</b></label>
         <input type="tel" name="tel" id="tel" placeholder="Telefone" value="${phone}">

@@ -46,9 +46,11 @@ def add_contact():
                 (name, tel)
                 )
                 conn.commit()
+                contact = conn.execute('SELECT * FROM contacts ORDER BY id DESC LIMIT 1').fetchall()
                 conn.close()
+                print(contact[0]['id'])
 
-                return {'contact': 'bla'}, 201
+                return {'contact': {'id': contact[0]['id'], 'name': contact[0]['name_contact'], 'phone': contact[0]['phone']}}, 201
             except KeyError:
                 return {'message': 'Bad request'}, 400
     else:
@@ -61,28 +63,27 @@ def update_contact(id):
         if not request.is_json:
             return {'message': 'Media type not supported'}, 415
         else:
-            try:
-                name = request.json['name']
-                tel = request.json['tel']
-                for contact in contacts:
-                    if contact['id'] == id:
-                        f_id = contacts.index(contact)
-                        contacts[f_id] = {'id': id, 'name': name, 'phone': tel}
-                        return {'message': 'Contato editado'}, 200
-                return {'message': 'Contato não encontrado'}, 404
-            except KeyError:
-                return {'message': 'Bad request'}, 400
+            name = request.json['name']
+            tel = request.json['tel']
+            conn = get_db_connection()
+            cur = conn.cursor()
+            cur.execute(f"UPDATE contacts SET name_contact = '{name}', phone = '{tel}' WHERE id = {id}")
+            conn.commit()
+            conn.close()    
+            return {'message': 'Contato editado'}, 200
+                
     else:
         return {'message': 'Method not allowed'}, 405
 
 # DELETE request to delete a contact
 @app.route('/contacts/<int:id>', methods=['DELETE'])
 def delete_contact(id):
-    for contact in contacts:
-        if contact['id'] == id:
-            contacts.remove(contact)
-            return {'message': 'Contato apagado'}, 200
-    return {'message': 'Contato não encontrado'}, 404
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute(f"DELETE FROM contacts WHERE id == {id}")
+    conn.commit()
+    conn.close()
+    return {'message': 'Contato apagado'}, 200
 
 @app.route('/', methods=['POST', 'GET'])
 def entry_page():
