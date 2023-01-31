@@ -39,9 +39,16 @@ def add_contact():
             try:
                 name = request.json['name']
                 tel = request.json['tel']
-                idContact = contacts[-1]['id']+1
-                contacts.append({'id': idContact, 'name': name, 'phone': tel})
-                return {'contact': contacts[-1]}, 201
+
+                conn = get_db_connection()
+                cur = conn.cursor()
+                cur.execute("INSERT INTO contacts (name_contact, phone) VALUES (?, ?)",
+                (name, tel)
+                )
+                conn.commit()
+                conn.close()
+
+                return {'contact': 'bla'}, 201
             except KeyError:
                 return {'message': 'Bad request'}, 400
     else:
