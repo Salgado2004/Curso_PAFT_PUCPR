@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-collection.component.css']
 })
 export class MyCollectionComponent {
-
+  nome = 'Minha coleção';
+  categoria = '';
+  itens = [];
 }
