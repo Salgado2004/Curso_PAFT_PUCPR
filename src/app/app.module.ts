@@ -10,6 +10,7 @@ import { CollectionItenComponent } from './collection-iten/collection-iten.compo
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { PaginaComponent } from './pagina/pagina.component';
+import { AtvAula4Component } from './atv-aula4/atv-aula4.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PaginaComponent } from './pagina/pagina.component';
     CollectionItenComponent,
     CabecalhoComponent,
     RodapeComponent,
-    PaginaComponent
+    PaginaComponent,
+    AtvAula4Component
   ],
   imports: [
     BrowserModule,
