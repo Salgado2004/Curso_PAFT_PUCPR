@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LogService } from './log.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { PaginaComponent } from './pagina/pagina.component';
 import { AtvAula4Component } from './atv-aula4/atv-aula4.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { AtvAula4Component } from './atv-aula4/atv-aula4.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
