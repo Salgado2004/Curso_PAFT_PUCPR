@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { LogService } from './log.service';
+import {MatChipsModule} from '@angular/material/chips';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,9 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { PaginaComponent } from './pagina/pagina.component';
 import { AtvAula4Component } from './atv-aula4/atv-aula4.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ItensComponent } from './itens/itens.component';
 
 
 @NgModule({
@@ -24,11 +28,15 @@ import { AtvAula4Component } from './atv-aula4/atv-aula4.component';
     CabecalhoComponent,
     RodapeComponent,
     PaginaComponent,
-    AtvAula4Component
+    AtvAula4Component,
+    CarrinhoComponent,
+    ItensComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatChipsModule
   ],
   providers: [LogService],
   bootstrap: [AppComponent]
