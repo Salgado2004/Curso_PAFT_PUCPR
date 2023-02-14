@@ -2,7 +2,8 @@
 
 
 body{
-    border: 5px solid red;
+    border: 1px solid #696969;
+    box-shadow: 2px 2px 5px #464646;
     width: 90%;
     height: 50%;
     margin: 5%;

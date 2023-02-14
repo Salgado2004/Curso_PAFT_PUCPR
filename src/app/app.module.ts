@@ -4,6 +4,7 @@ import { LogService } from './log.service';
 import { MatChipsModule } from '@angular/material/chips';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,7 +47,8 @@ import { CategoriesComponent } from './atv-aula5/site/categories/categories.comp
     BrowserAnimationsModule,
     MatChipsModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
   ],
   providers: [LogService],
   bootstrap: [AppComponent]
