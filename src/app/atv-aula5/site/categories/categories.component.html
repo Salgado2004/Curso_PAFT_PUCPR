@@ -15,7 +15,7 @@
         <!-- route Column -->
         <ng-container matColumnDef="route">
           <th mat-header-cell *matHeaderCellDef> Mais informações<mat-icon>info</mat-icon> </th>
-          <td mat-cell *matCellDef="let element"> <a routerLink="/{{element.route}}">verMais/{{ element.name }}</a> </td>
+          <td mat-cell *matCellDef="let element"> <a routerLink="movieInfo/{{ element.route }}">Ver-mais/{{ element.name }}</a> </td>
         </ng-container>
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

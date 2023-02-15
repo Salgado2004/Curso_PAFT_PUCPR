@@ -7,17 +7,18 @@ export interface moviesDatabase {
 }
 
 const ELEMENT_DATA: moviesDatabase[] = [
-  {category: "Aventura", name: 'Hydrogen', route: 1.0079},
-  {category: "Aventura", name: 'Helium', route: 4.0026},
-  {category: "Ação", name: 'Lithium', route: 6.941},
-  {category: "Romance", name: 'Beryllium', route: 9.0122},
-  {category: "Romance", name: 'Boron', route: 10.811},
-  {category: "Ação", name: 'Carbon', route: 12.0107},
-  {category: "Aventura", name: 'Nitrogen', route: 14.0067},
-  {category: "Drama", name: 'Oxygen', route: 15.9994},
-  {category: "Drama", name: 'Fluorine', route: 18.9984},
-  {category: "Terror", name: 'Neon', route: 20.1797},
-  {category: "Musical", name: 'Neon', route: 20.1797},
+  {category: "Aventura", name: 'Era do gelo', route: 1},
+  {category: "Aventura", name: 'Up: Altas aventuras', route: 2},
+  {category: "Ação", name: 'Matrix', route: 3},
+  {category: "Romance", name: 'Um amor para recordar', route: 4},
+  {category: "Romance", name: 'Your name', route: 5},
+  {category: "Ação", name: 'Rambo: Programado para matar', route: 6},
+  {category: "Aventura", name: 'Bumbleblee', route: 7},
+  {category: "Drama", name: 'A culpa é das estrelas', route: 8},
+  {category: "Drama", name: 'História de um casamento', route: 9},
+  {category: "Terror", name: 'Pânico 6', route: 10},
+  {category: "Suspense", name: 'Hereditário', route: 11},
+  {category: "Musical", name: 'Tick tick Boom', route: 12},
 ];
 
 @Component({

@@ -5,6 +5,8 @@ import { MatChipsModule } from '@angular/material/chips';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +16,7 @@ import { MyCollectionComponent } from './my-collection/my-collection.component';
 import { CollectionItenComponent } from './collection-iten/collection-iten.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { RodapeComponent } from './rodape/rodape.component';
-import { PaginaComponent } from './pagina/pagina.component';
+import { PaginaComponent } from './atv-aula2/pagina/pagina.component';
 import { AtvAula4Component } from './atv-aula4/atv-aula4.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
@@ -22,6 +24,7 @@ import { ItensComponent } from './itens/itens.component';
 import { AtvAula5Component } from './atv-aula5/atv-aula5.component';
 import { SiteComponent } from './atv-aula5/site/site.component';
 import { CategoriesComponent } from './atv-aula5/site/categories/categories.component';
+import { MovieInfoComponent } from './atv-aula5/site/movie-info/movie-info.component';
 
 
 @NgModule({
@@ -39,7 +42,8 @@ import { CategoriesComponent } from './atv-aula5/site/categories/categories.comp
     ItensComponent,
     AtvAula5Component,
     SiteComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    MovieInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,9 @@ import { CategoriesComponent } from './atv-aula5/site/categories/categories.comp
     MatChipsModule,
     MatMenuModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   providers: [LogService],
   bootstrap: [AppComponent]
