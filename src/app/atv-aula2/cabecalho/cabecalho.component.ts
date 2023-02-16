@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./cabecalho.component.css']
 })
 export class CabecalhoComponent {
-
+  
+  title = 'Atividades Angular PUCPR';
 }
