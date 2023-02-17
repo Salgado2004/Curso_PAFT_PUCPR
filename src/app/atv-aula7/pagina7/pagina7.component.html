@@ -1,0 +1,32 @@
+<body>
+    <div class="exercicio">
+        <h4>1. Converter um número em um valor monetário</h4>
+        <label for="valor">Insira um valor numérico</label>
+        <div id="content">
+            <input type="text" id="valor" class="form-control" [(ngModel)]="valorMonetario">
+            {{ valorMonetario | money}} 
+        </div>
+        
+    </div>
+    <div class="exercicio">
+        <h4>2. Filtrar elementos pares ou ímpares</h4>
+        <div>
+            <label for="evenOrodd">Insira uma lista de números separados por ","</label>
+            <div id="content">
+                <input type="text" id="evenOrodd" class="form-control" [(ngModel)]="list">
+                <select (input)="selection($event)">
+                    <option value="even">Pares</option>
+                    <option value="odd">Ímpares</option>
+                </select>
+            </div>
+            <p *ngIf="option == 'even'">{{ list | oddEven: "even" }}</p>
+            <p *ngIf="option == 'odd'">{{ list | oddEven: "odd" }}</p>
+        </div>
+    </div>
+    <div class="exercicio">
+        <h4>3. Truncar um texto e mostrar reticências</h4>
+        <input type="text" id="texto" class="form-control" [(ngModel)]="texto">
+        <input type="number" id="maxLenght" class="form-control" [(ngModel)]="maxLenght"> 
+        <p>{{  texto | shortening: maxLenght}}</p>
+    </div>
+</body>

@@ -1,0 +1,23 @@
+body{
+    position: relative;
+    border: 1px solid #696969;
+    box-shadow: 2px 2px 5px #464646;
+    width: 90%;
+    height: 50%;
+    margin: 5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.exercicio{
+    margin: 15px;
+    height: 100px;
+}
+
+.exercicio input, select{
+    margin-left: 5px;
+}
+
+input[type="number"]{
+    width: 40px;
+}

@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { LogService } from './log.service';
 import { MatChipsModule } from '@angular/material/chips';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
-import {MatTableModule} from '@angular/material/table';
-import {MatCardModule} from '@angular/material/card';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { FormsModule } from '@angular/forms';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,11 @@ import { AtvAula5Component } from './atv-aula5/atv-aula5.component';
 import { SiteComponent } from './atv-aula5/site/site.component';
 import { CategoriesComponent } from './atv-aula5/site/categories/categories.component';
 import { MovieInfoComponent } from './atv-aula5/site/movie-info/movie-info.component';
+import { AtvAula7Component } from './atv-aula7/atv-aula7.component';
+import { Pagina7Component } from './atv-aula7/pagina7/pagina7.component';
+import { MoneyPipe } from './atv-aula7/pipes/money.pipe';
+import { OddEvenPipe } from './atv-aula7/pipes/odd-even.pipe';
+import { ShorteningPipe } from './atv-aula7/pipes/shortening.pipe';
 
 
 @NgModule({
@@ -43,11 +49,17 @@ import { MovieInfoComponent } from './atv-aula5/site/movie-info/movie-info.compo
     AtvAula5Component,
     SiteComponent,
     CategoriesComponent,
-    MovieInfoComponent
+    MovieInfoComponent,
+    AtvAula7Component,
+    Pagina7Component,
+    MoneyPipe,
+    OddEvenPipe,
+    ShorteningPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatChipsModule,
     MatMenuModule,
