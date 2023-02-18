@@ -8,7 +8,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +34,7 @@ import { MoneyPipe } from './atv-aula7/pipes/money.pipe';
 import { OddEvenPipe } from './atv-aula7/pipes/odd-even.pipe';
 import { ShorteningPipe } from './atv-aula7/pipes/shortening.pipe';
 import { CategoriesComponent } from './atv-aula5/site/categories/categories.component';
+import { AtvAula8Component } from './atv-aula8/atv-aula8.component';
 
 
 @NgModule({
@@ -57,7 +59,9 @@ import { CategoriesComponent } from './atv-aula5/site/categories/categories.comp
     MoneyPipe,
     OddEvenPipe,
     ShorteningPipe,
-    CategoriesComponent
+    CategoriesComponent,
+    AtvAula8Component
+    
   ],
   imports: [
     BrowserModule,
@@ -70,7 +74,8 @@ import { CategoriesComponent } from './atv-aula5/site/categories/categories.comp
     MatTableModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [LogService],
   bootstrap: [AppComponent]

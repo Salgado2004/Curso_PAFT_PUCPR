@@ -8,6 +8,7 @@ import { movieListComponent } from './atv-aula5/site/movie-list/movie-list.compo
 import { MovieInfoComponent } from './atv-aula5/site/movie-info/movie-info.component';
 import { AtvAula7Component } from './atv-aula7/atv-aula7.component';
 import { CategoriesComponent } from './atv-aula5/site/categories/categories.component';
+import { AtvAula8Component } from './atv-aula8/atv-aula8.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "/aula2", pathMatch: "full"},
@@ -23,6 +24,7 @@ const routes: Routes = [
       {path: "movieList/movieInfo/:id", component: MovieInfoComponent}
     ]},
     {path: "aula7", component: AtvAula7Component},
+    {path: "aula8", component: AtvAula8Component},
 ];
 
 @NgModule({
