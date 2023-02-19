@@ -18,10 +18,10 @@ const routes: Routes = [
   {path: "aula5", component: AtvAula5Component,
     children : [
       {path: "", redirectTo: "movieList", pathMatch: "full"},
-      {path: "all", redirectTo: "movieList", pathMatch: "full"},
-      {path: "movieList", component: movieListComponent},
+      {path: "all", redirectTo: "movieList/all", pathMatch: "full"},
+      {path: "movieList/:category", component: movieListComponent},
       {path: "categories", component: CategoriesComponent},
-      {path: "movieList/movieInfo/:id", component: MovieInfoComponent}
+      {path: "movieList/:category/movieInfo/:id", component: MovieInfoComponent}
     ]},
     {path: "aula7", component: AtvAula7Component},
     {path: "aula8", component: AtvAula8Component},

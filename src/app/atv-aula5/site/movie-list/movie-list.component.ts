@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import {MatTableDataSource} from '@angular/material/table';
 
 export interface moviesDatabase {
   name: string;
@@ -31,5 +33,17 @@ const ELEMENT_DATA: moviesDatabase[] = [
 })
 export class movieListComponent {
   displayedColumns: string[] = ['category', 'name', 'route'];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  category: any;
+
+  constructor(private activatedRoute : ActivatedRoute) { }
+
+  ngOnInit(){
+    this.category = this.activatedRoute.snapshot.paramMap.get("category");
+
+    if (this.category != "all"){
+      console.log(this.category);
+      this.dataSource.filter = this.category.trim().toLowerCase();
+    }
+  }
 }
