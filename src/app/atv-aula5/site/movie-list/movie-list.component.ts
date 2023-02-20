@@ -44,6 +44,6 @@ export class movieListComponent {
     if (this.category != "all"){
       console.log(this.category);
       this.dataSource.filter = this.category.trim().toLowerCase();
-    }
+    } 
   }
 }

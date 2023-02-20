@@ -35,6 +35,9 @@ import { OddEvenPipe } from './atv-aula7/pipes/odd-even.pipe';
 import { ShorteningPipe } from './atv-aula7/pipes/shortening.pipe';
 import { CategoriesComponent } from './atv-aula5/site/categories/categories.component';
 import { AtvAula8Component } from './atv-aula8/atv-aula8.component';
+import { LoginComponent } from './atv-aula5/site/login/login.component';
+import { ApplicationComponent } from './atv-aula4/application/application.component';
+import { ProdutoComponent } from './atv-aula4/produto/produto.component';
 
 
 @NgModule({
@@ -60,7 +63,10 @@ import { AtvAula8Component } from './atv-aula8/atv-aula8.component';
     OddEvenPipe,
     ShorteningPipe,
     CategoriesComponent,
-    AtvAula8Component
+    AtvAula8Component,
+    LoginComponent,
+    ApplicationComponent,
+    ProdutoComponent
     
   ],
   imports: [

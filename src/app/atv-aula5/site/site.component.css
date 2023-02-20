@@ -36,3 +36,9 @@ header button:hover{
     cursor: pointer;
     filter: brightness(120%);
 }
+
+@media (max-height: 650px) {
+    body{
+        height: 75%;
+    }
+}

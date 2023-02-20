@@ -9,6 +9,7 @@ import { MovieInfoComponent } from './atv-aula5/site/movie-info/movie-info.compo
 import { AtvAula7Component } from './atv-aula7/atv-aula7.component';
 import { CategoriesComponent } from './atv-aula5/site/categories/categories.component';
 import { AtvAula8Component } from './atv-aula8/atv-aula8.component';
+import { LoginComponent } from './atv-aula5/site/login/login.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "/aula2", pathMatch: "full"},
@@ -17,10 +18,11 @@ const routes: Routes = [
   {path: "aula4", component: AtvAula4Component},
   {path: "aula5", component: AtvAula5Component,
     children : [
-      {path: "", redirectTo: "movieList", pathMatch: "full"},
+      {path: "", redirectTo: "movieList/all", pathMatch: "full"},
       {path: "all", redirectTo: "movieList/all", pathMatch: "full"},
       {path: "movieList/:category", component: movieListComponent},
       {path: "categories", component: CategoriesComponent},
+      {path: "login", component: LoginComponent},
       {path: "movieList/:category/movieInfo/:id", component: MovieInfoComponent}
     ]},
     {path: "aula7", component: AtvAula7Component},

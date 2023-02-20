@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { CatFactsService } from '../cat-facts.service';
+import { CatFactsService } from './cat-facts.service';
 import { MatTable } from '@angular/material/table';
 
 export interface catFacts {

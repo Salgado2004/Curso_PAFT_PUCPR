@@ -21,3 +21,9 @@ body{
 input[type="number"]{
     width: 40px;
 }
+
+@media (max-height: 650px) {
+    body{
+        height: 65%;
+    }
+}
