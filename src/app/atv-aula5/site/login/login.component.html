@@ -4,13 +4,25 @@
             <label for="email">Email</label>
             <input type="text" name="email" class="input" placeholder="Insira seu email" formControlName="email" />
             <span *ngIf="email?.errors?.['required'] && formDir.submitted">Você deve inserir um email</span>
+            <span *ngIf="email?.errors?.['email']">Insira um email válido</span>
+        </div>
+        <div>
+            <label for="nome">Nome completo</label>
+            <input type="text" name="nome" class="input" placeholder="Insira seu nome" formControlName="nome" />
+            <span *ngIf="nome?.errors?.['required'] && formDir.submitted">Você deve inserir seu nome completo</span>
+        </div>
+        <div>
+            <label for="data_nasc">Data de nascimento</label>
+            <input type="date" name="data_nasc" class="input" formControlName="data_nasc" />
+            <span *ngIf="data_nasc?.errors?.['age'] && formDir.submitted">Você deve ter pelo menos 10 anos</span>
+            <span *ngIf="data_nasc?.errors?.['future'] && formDir.submitted">Data inválida</span>
         </div>
         <div>
             <label for="password">Senha</label>
             <input type={{inputType}} name="password" class="input" placeholder="Insira sua senha" formControlName="password">
             <mat-icon (click)="togglePass()" id="eye-icon">{{visibility}}</mat-icon>
             <span *ngIf="password?.errors?.['required'] && formDir.submitted">Você deve inserir uma senha</span>
-            <span *ngIf="password?.errors?.['minlength'] && formDir.submitted">A senha deve ter pelo menos 8 letras</span>
+            <span *ngIf="password?.errors?.['minlength'] && formDir.submitted">A senha deve ter pelo menos 8 caracteres</span>
         </div>
         <button type="submit" class="save">Entrar</button>
     </form>

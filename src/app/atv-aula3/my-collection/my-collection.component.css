@@ -18,7 +18,7 @@ body{
 
 #title span{
     color: #ffff43;
-    filter: drop-shadow(1px 1px 1px rgb(197, 47, 47));
+    filter: drop-shadow(1px 1px 1px #c52f2f);
 }
 
 .itens{
