@@ -1,1 +1,8 @@
-<p>produto works!</p>
+<div class="produto">
+    <img src="{{ img }}" alt="{{ nome }}" class="img">
+    <div class="details">
+        <p class="nome">{{ nome }}<br>
+        <span *ngIf="description != ''" class="description">{{ description }}</span></p>
+        <p>Preço: {{ preco | money}}</p>
+    </div>
+</div>

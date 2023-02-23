@@ -8,6 +8,35 @@ body{
     overflow-y: scroll;
 }
 
+#loginButton{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    padding: 5px;
+    width: 80px;
+    font-size: 13pt;
+    border: 1px solid #5f0a0a;
+    background-color: #cc3b3b;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+#loginButton:hover{
+    cursor: pointer;
+    background-color: #852929;
+    box-shadow: inset 2px 2px 5px #464646;
+}
+
+.estante_produtos{
+    padding: 5px;
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
 @media (max-height: 650px) {
     body{
         height: 75%;

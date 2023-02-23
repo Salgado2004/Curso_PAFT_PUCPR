@@ -40,6 +40,7 @@ import { ApplicationComponent } from './atv-aula4/application/application.compon
 import { ProdutoComponent } from './atv-aula4/produto/produto.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
@@ -85,7 +86,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatGridListModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDividerModule
   ],
   providers: [LogService],
   bootstrap: [AppComponent]

@@ -1,0 +1,29 @@
+.produto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 155px;
+    height: 280px;
+    padding: 5px;
+    border: 1px solid #6d6d6d;
+    border-radius: 10px;
+    margin: 12px;
+    box-shadow: 2px 2px 5px #464646;;
+}
+
+.img{
+    width: 100%;
+}
+
+.details{
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description{
+    font-size: smaller;
+    color: #6d6d6d;
+}
