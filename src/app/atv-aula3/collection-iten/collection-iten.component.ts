@@ -18,4 +18,16 @@ export class CollectionItenComponent {
     this.estado = this.item['estado'];
     this.quantidade = this.item['quantidade']
   }
+
+  mudarEstilo(estado: string){
+    let estados = estado.split(" ");
+    if (estados[0] == "Novo"){
+      console.log(estados[0]);
+      return "linear-gradient(45deg, #59bb4164, #7dbe6d64, #a1ff8964)"
+    } else if(estados[0] == "Usado"){
+      return "linear-gradient(45deg, #bb784164, #be916d64, #fff78964)"
+    } else{
+      return "transparent"
+    }
+  }
 }

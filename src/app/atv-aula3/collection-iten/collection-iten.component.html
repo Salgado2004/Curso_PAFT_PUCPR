@@ -1,4 +1,5 @@
-<div class="item">
+<div class="item" 
+[ngStyle]="{ background: mudarEstilo(estado!) }">
     <img src="{{ img }}" alt="capa" class="cover">
     <h4 class="nome">{{ nome }}</h4>
     <p>Estado: {{ estado }}<br>Quantidade: {{ quantidade }}</p>
