@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-collection-iten',
@@ -6,7 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./collection-iten.component.css']
 })
 export class CollectionItenComponent {
-  nome = '';
-  quantidade = '';
-  estado = '';
+  @Input() item: any;
+  nome: string | undefined;
+  quantidade: number | undefined;
+  estado: string | undefined;
+  img: string | undefined;
+
+  ngOnInit(){
+    this.nome = this.item['nome'];
+    this.img = this.item['img'];
+    this.estado = this.item['estado'];
+    this.quantidade = this.item['quantidade']
+  }
 }

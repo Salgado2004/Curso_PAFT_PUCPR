@@ -38,6 +38,8 @@ import { AtvAula8Component } from './atv-aula8/atv-aula8.component';
 import { LoginComponent } from './atv-aula5/site/login/login.component';
 import { ApplicationComponent } from './atv-aula4/application/application.component';
 import { ProdutoComponent } from './atv-aula4/produto/produto.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -81,7 +83,9 @@ import { ProdutoComponent } from './atv-aula4/produto/produto.component';
     MatCardModule,
     MatProgressSpinnerModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: [LogService],
   bootstrap: [AppComponent]

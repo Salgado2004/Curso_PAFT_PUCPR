@@ -1,1 +1,9 @@
-<p>my-collection works!</p>
+<body>
+    <h1 id="title">Coleção: <span>{{ nome }}</span></h1>
+    <h3 *ngIf="categoria != ''">Categoria: {{ categoria }}</h3>
+    <div class="itens">
+        <app-collection-iten
+        *ngFor="let item of itens"
+        [item]="item"></app-collection-iten>
+    </div>
+</body>
