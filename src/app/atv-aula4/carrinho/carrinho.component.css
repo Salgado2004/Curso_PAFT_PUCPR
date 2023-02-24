@@ -1,5 +1,10 @@
 header{
     display: flex;
+    margin: 15px;
+}
+header h4{
+    font-size: 18pt;
+    font-weight: 500;
 }
 
 mat-chip-listbox{

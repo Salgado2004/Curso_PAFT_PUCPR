@@ -4,7 +4,7 @@
 </header>
 <!-- <app-itens *ngFor="let iten of itens"></app-itens> -->
 <mat-chip-listbox aria-label="Produtos no carrinho">
-    <app-itens></app-itens>
-    <app-itens></app-itens>
-    <app-itens></app-itens>
+    <app-itens
+    *ngFor="let item of items"
+    [item]="item"></app-itens>
 </mat-chip-listbox>

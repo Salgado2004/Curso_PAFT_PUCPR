@@ -1,6 +1,9 @@
 <body>
-  <button id="loginButton">Login</button>
-  <h4>Produtos</h4>
+  <button id="loginButton">Login <mat-icon>login</mat-icon> </button>
+  <header>
+    <h4 class="title">Produtos</h4>
+    <mat-icon>storefront</mat-icon>
+  </header>
   <div class="estante_produtos">
     <app-produto
     *ngFor="let produto of produtos"

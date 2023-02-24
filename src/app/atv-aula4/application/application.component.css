@@ -8,13 +8,25 @@ body{
     overflow-y: scroll;
 }
 
+header{
+    display: flex;
+    margin: 15px;
+}
+header .title{
+    font-size: 18pt;
+    font-weight: 500;
+}
+
 #loginButton{
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     right: 10px;
     top: 10px;
     z-index: 1;
     padding: 5px;
-    width: 80px;
+    width: 85px;
     font-size: 13pt;
     border: 1px solid #5f0a0a;
     background-color: #cc3b3b;

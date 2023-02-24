@@ -1,0 +1,9 @@
+mat-chip{
+    height: 50px;
+    margin: 8px;
+}
+
+mat-chip img{
+    height: 30px;
+    width: 30px;
+}

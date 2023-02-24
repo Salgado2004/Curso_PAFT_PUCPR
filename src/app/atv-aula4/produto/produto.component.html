@@ -3,6 +3,8 @@
     <div class="details">
         <p class="nome">{{ nome }}<br>
         <span *ngIf="description != ''" class="description">{{ description }}</span></p>
-        <p>Preço: {{ preco | money}}</p>
+        <p class="compra">Preço: {{ preco | money}} {{  medida }}<br>
+        Quantidade: <input type="number" id="quantidade" name="quantidade" [(ngModel)]="quantidade"></p>
+        <button id="add_cart" [disabled]="desativarButton()" (click)="addCarrinho()" title="Adicionar ao carrinho"><mat-icon>add_shopping_cart</mat-icon></button>
     </div>
 </div>
