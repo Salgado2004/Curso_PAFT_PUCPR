@@ -1,14 +1,40 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Random cat facts
+Projeto final BFF
 {% endblock %}
 
 {% block body %}
-<h1>Random cat facts</h1>
-{% for fact in the_catfacts['data'] %}
-<p>{{ fact }}</p>
+<h1> Projeto final Backend for Frontend</h1>
+<h3>Projeto final da disciplina de Backend for Frontend do curso de Front-end ofertado pelo Programa de Atração e Formação de Talentos da PUCPR</h3>
 
-{% endfor %}
+<h2>Usando o flask crie 3 rotas:</h2>
 
+<ol>
+    <li>
+        Que consuma uma API e adapte o conteúdo para uma pagina web (crie tb uma pagina web que realize este consumo usando ajax/fetch)
+        <ul>
+            <li><a href="https://www.themoviedb.org/" target="_blank">https://www.themoviedb.org/</a></li>
+        </ul>
+        Acessar Rota 1: <a>Rota 1</a>
+    </li>
+    <li>
+        Que consuma duas APIs, combinando e adaptando o conteúdo para um json (crie tb uma pagina web que realize este consumo usando ajax/fetch)
+        <ul>
+            <li><a href="https://www.themoviedb.org/" target="_blank">https://www.themoviedb.org/</a></li>
+            <li><a href="https://rapidapi.com/apininjas/api/celebrity-by-api-ninjas/" target="_blank">https://rapidapi.com/apininjas/api/celebrity-by-api-ninjas/</a></li>
+        </ul>
+        Acessar Rota 2: <a>Rota 2</a>
+    </li>
+    <li>
+        Crie uma rota que retorne um template (JINJA) que consuma os dados de uma API (pode ser uma dar anteriores).
+        <ul>
+            <li><a href="https://www.themoviedb.org/" target="_blank">https://www.themoviedb.org/</a></li>
+            <li><a href="https://rapidapi.com/apininjas/api/celebrity-by-api-ninjas/" target="_blank">https://rapidapi.com/apininjas/api/celebrity-by-api-ninjas/</a></li>
+        </ul>
+        Acessar Rota 3: <a>Rota 3</a>
+    </li>
+</ol>
+
+<h2>Realize a verificação de erros nos retornos da API.</h2>
 {% endblock %}
