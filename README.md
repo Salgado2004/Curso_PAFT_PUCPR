@@ -1,5 +1,7 @@
 # Projeto final Backend for Frontend
 
+Projeto final da disciplina de Backend for Frontend do curso de Front-end ofertado pelo Programa de Atração e Formação de Talentos da PUCPR
+
 **Usando o flask crie 3 rotas:**
 
 - [ ] Que consuma uma API e adapte o conteúdo para uma pagina web (crie tb uma pagina web que realize este consumo usando ajax/fetch)
