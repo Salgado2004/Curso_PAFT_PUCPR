@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Random cat facts
+{% endblock %}
+
+{% block body %}
+<h1>Random cat facts</h1>
+{% for fact in the_catfacts['data'] %}
+<p>{{ fact }}</p>
+
+{% endfor %}
+
+{% endblock %}
