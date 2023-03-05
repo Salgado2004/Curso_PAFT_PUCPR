@@ -47,6 +47,7 @@ document.body.onload = function(){
                         <td>Nacionalidade:</td><td>${actor.nacionalidade}</td>
                     </tr>
                 </table>
+                <a href="rota3/${actor.id}">Ver outros trabalhos</a>
             </div>
             `;
         }
