@@ -38,8 +38,33 @@ def getMovieDetails(movieId):
     details = resp1.json()
     casting = resp2.json()
     if details and casting != None:
+        cast = []
         for actor in casting['cast']:
-            print(actor["name"])
+            headers = {"X-RapidAPI-Key": "a2a5f196d8msh98f510145890a90p10bd6fjsn1ce3f431f12f", "X-RapidAPI-Host": 'celebrity-by-api-ninjas.p.rapidapi.com'}
+            paramsActor = {"name": actor['name']}
+            resp3 = requests.get("https://celebrity-by-api-ninjas.p.rapidapi.com/v1/celebrity", headers=headers, params=paramsActor)
+            if resp3.status_code == 200:
+                respActor = resp3.json()
+                if len(respActor) > 0:
+                    try:
+                        age = respActor[0]['age']
+                        age = str(age)+" anos"
+                        print(age)
+                    except KeyError:
+                        age = "Não informado"
+                    except TypeError:
+                        age = "Não informado"
+                    try:
+                        nation = respActor[0]['nationality']
+                    except KeyError:
+                        nation = "Não informado"
+                    try:
+                        birthday = respActor[0]['birthday']
+                    except KeyError:
+                        birthday = "Não informado"
+                    actorDetails = {"name": respActor[0]['name'], "nacionalidade": nation, "birthday": birthday, "character": actor['character'], "foto": "https://image.tmdb.org/t/p/w200" + actor['profile_path'], "age": age}
+                    cast.append(actorDetails)
+        movieDetails = {"title": details['title'], "phrase": details['tagline'], "launch": details['release_date'], "cover": "https://image.tmdb.org/t/p/w200" + details['poster_path'], "cast": cast}
     return movieDetails
 
 @app.route('/')
