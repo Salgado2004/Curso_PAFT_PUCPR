@@ -1,0 +1,61 @@
+#movieList1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#movieList1 .movieCard{
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    height: 350px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 5px #000;
+}
+
+.movieCard .movieInfo{
+    padding: 8px;
+    position: relative;
+}
+
+.movieInfo .title{
+    font-size: 18pt;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.movieInfo .data{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15pt;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.movieInfo .nota{
+    font-size: 18pt;
+    font-weight: 800;
+    color: #1b6e1b;
+}
+
+.movieInfo .resumo{
+    margin-top: 0;
+    width: 290px;
+    text-align: justify;
+}
+
+.movieInfo .link{
+    position: absolute;
+    bottom: 5px;
+    font-size: 15pt;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.movieInfo .link:hover{
+    font-weight: 900;    
+}
