@@ -48,12 +48,14 @@ def getMovieDetails(movieId):
                 if len(respActor) > 0:
                     try:
                         age = respActor[0]['age']
-                        age = str(age)+" anos"
-                        print(age)
+                        try:
+                            age = str(age)+" anos"
+                        except TypeError:
+                            age = "Não informado"
                     except KeyError:
                         age = "Não informado"
-                    except TypeError:
-                        age = "Não informado"
+                    
+                    print(age)
                     try:
                         nation = respActor[0]['nationality']
                     except KeyError:
@@ -62,7 +64,7 @@ def getMovieDetails(movieId):
                         birthday = respActor[0]['birthday']
                     except KeyError:
                         birthday = "Não informado"
-                    actorDetails = {"name": respActor[0]['name'], "nacionalidade": nation, "birthday": birthday, "character": actor['character'], "foto": "https://image.tmdb.org/t/p/w200" + actor['profile_path'], "age": age}
+                    actorDetails = {"name": respActor[0]['name'], "nacionalidade": nation, "birthday": birthday, "character": actor['character'], "foto": "https://image.tmdb.org/t/p/w200" + actor['profile_path'] if actor['profile_path'] != None else "../static/no_profile_pic.PNG", "age": age}
                     cast.append(actorDetails)
         movieDetails = {"title": details['title'], "phrase": details['tagline'], "launch": details['release_date'], "cover": "https://image.tmdb.org/t/p/w200" + details['poster_path'], "cast": cast}
     return movieDetails
