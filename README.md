@@ -7,7 +7,7 @@ Projeto final da disciplina de Backend for Frontend do curso de Front-end oferta
 - [x] Que consuma uma API e adapte o conteúdo para uma pagina web (crie tb uma pagina web que realize este consumo usando ajax/fetch)
 https://www.themoviedb.org/
 
-- [ ] Que consuma duas APIs, combinando e adaptando o conteúdo para um json (crie tb uma pagina web que realize este consumo usando ajax/fetch)
+- [x] Que consuma duas APIs, combinando e adaptando o conteúdo para um json (crie tb uma pagina web que realize este consumo usando ajax/fetch)
 https://www.themoviedb.org/
 https://rapidapi.com/apininjas/api/celebrity-by-api-ninjas/
 
