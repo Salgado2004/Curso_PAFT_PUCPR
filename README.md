@@ -11,8 +11,7 @@ https://www.themoviedb.org/
 https://www.themoviedb.org/
 https://rapidapi.com/apininjas/api/celebrity-by-api-ninjas/
 
-- [ ] Crie uma rota que retorne um template (JINJA) que consuma os dados de uma API (pode ser uma dar anteriores).
-https://rapidapi.com/apininjas/api/celebrity-by-api-ninjas/
+- [x] Crie uma rota que retorne um template (JINJA) que consuma os dados de uma API (pode ser uma dar anteriores).
 https://www.themoviedb.org/
  
 **Realize a verificação de erros nos retornos da API.**

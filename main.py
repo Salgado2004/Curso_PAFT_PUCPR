@@ -67,6 +67,30 @@ def getMovieDetails(movieId):
         movieDetails = {"title": details['title'], "phrase": details['tagline'], "launch": details['release_date'], "cover": "https://image.tmdb.org/t/p/w200" + details['poster_path'], "cast": cast}
     return movieDetails
 
+@app.route('/rota3/<personId>')
+def getActorDetails(personId):
+    params = {"api_key": "7128cc23bb835419dab02e5eab2923a5", "language": "pt-BR"}
+    resp1 = requests.get(f'https://api.themoviedb.org/3/person/{personId}', params=params)
+    resp2 = requests.get(f'https://api.themoviedb.org/3/person/{personId}/movie_credits', params=params)
+    details = resp1.json()
+    works = resp2.json()
+    if details and works != None:
+        workedFor = []
+        for work in works['cast']:
+            thisWork = {"name": work['title'], "character": work['character'], "cover": "https://image.tmdb.org/t/p/w200" + work['poster_path'] if work['poster_path'] != None else "../static/no_cover.PNG"}
+            workedFor.append(thisWork)
+        personDetails = {
+            "name": details['name'],
+            "bio": details['biography'],
+            "birthday": details['birthday'],
+            "home": details['place_of_birth'],
+            "known_for": details['known_for_department'],
+            "foto": "https://image.tmdb.org/t/p/w200" + details['profile_path'] if details['profile_path'] != None else "../static/no_profile_pic.PNG",
+            "fame": details['popularity'],
+            "trabalhos": workedFor
+        }
+        return render_template("rota3.html", actorDetails=personDetails)
+
 @app.route('/')
 def index():
     return render_template('index.html')

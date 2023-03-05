@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+BFF | Rota 3
+{% endblock %}
+
+{% block body %}
+<h1>Rota 3</h1>
+<div id="actorPage">
+    <div class="actorDetails">
+        <img src="{{ actorDetails['foto'] }}">
+        <div>
+            <h1>{{ actorDetails['name'] }}</h1>
+            <p>{{ actorDetails['bio'] }}</p>
+        </div>
+        <table>
+            <tr>
+                <th>Aniversário: </th><td>{{ actorDetails['birthday'] }}</td><th>Terra natal: </th><td>{{ actorDetails['home'] }}</td>
+            </tr>
+            <tr>
+                <th>Conhecido por: </th><td>{{ actorDetails['known_for'] }}</td><th>Popularidade: </th><td>{{ actorDetails['fame'] }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="workedFor">
+        {% for trabalho in actorDetails['trabalhos'] %}
+            <div class="workCard">
+                <img class="cover" src="{{ trabalho['cover'] }}">
+                <h2>{{ trabalho['name'] }}</h2>
+                <p>{{ trabalho['character'] }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

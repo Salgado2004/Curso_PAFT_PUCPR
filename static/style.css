@@ -93,7 +93,7 @@
     margin: 10px;
     border: 1px solid #000;
     width: 275px;
-    height: 350px;
+    height: 375px;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -151,3 +151,70 @@
         transform: rotate(360deg);
     }
     } 
+
+/* Rota 3 */
+#actorPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.actorDetails{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin-bottom: 15px;
+}
+
+.actorDetails div{
+    width: 40%;
+    height: 90%;
+    margin: 10px;
+}
+
+.actorDetails div p{
+    text-align: justify;
+}
+
+.actorDetails table{
+    border: 1px solid #000;
+    height: 50%;
+    margin: 10px;
+    padding: 5px;
+}
+.actorDetails table td, th{
+    text-align: left;
+    padding: 5px;
+}
+
+.workedFor{
+    width: 95%;
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.workCard{
+    margin: 10px;
+    border: 1px solid #000;
+    width: 275px;
+    height: 375px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.cover{
+    height: 65%;
+}
+
+.workCard h2{
+    text-align: center;
+}
+
+.workCard p{
+    margin-top: 5px;
+}
