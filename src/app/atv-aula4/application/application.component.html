@@ -1,5 +1,5 @@
 <body>
-  <button id="loginButton">Login <mat-icon>login</mat-icon> </button>
+  <button id="loginButton" (click)="logar()">Login <mat-icon>login</mat-icon> </button>
   <header>
     <h4 class="title">Produtos</h4>
     <mat-icon>storefront</mat-icon>
@@ -10,5 +10,5 @@
     [produto]="produto"></app-produto>
   </div>
   <mat-divider></mat-divider>
-  <app-carrinho></app-carrinho>
+  <app-carrinho [login]="login"></app-carrinho>
 </body>

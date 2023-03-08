@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
 import { GlobalEventEmitterService } from '../global-event-emitter.service';
 
@@ -8,6 +8,7 @@ import { GlobalEventEmitterService } from '../global-event-emitter.service';
   styleUrls: ['./carrinho.component.css']
 })
 export class CarrinhoComponent {
+  @Input() login!: boolean;
   items: Array<any> = [];
 
   constructor(private _snackBar: MatSnackBar) {}
@@ -42,9 +43,16 @@ export class CarrinhoComponent {
   }
 
   finalizaCompra(){
-      this._snackBar.open("Compra finalizada"," ", {
-        duration: 2000,
-      });
+      if (this.login){
+        this._snackBar.open("Compra finalizada com sucesso!"," ", {
+          duration: 2000,
+        });
+      } else{
+        this._snackBar.open("Você deve estar logado para acessar essa função"," ", {
+          duration: 2000,
+        });
+      }
+      
   }
 
 }

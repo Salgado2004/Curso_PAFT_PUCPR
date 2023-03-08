@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LoginService } from '../login.service';
+import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-application',
@@ -19,6 +21,19 @@ export class ApplicationComponent {
     {"nome": "Abacate", "medida": "Kg", "description": "", "preço": 3.49, "img": "https://api.cndr.me/images/png/15890.png"},
     {"nome": "Whisky Johnnie Walker Red Label", "medida": "un", "description": "750ml", "preço": 69.90, "img": "https://api.cndr.me/images/png/1646421.png"},
     {"nome": "Costela Minga Bovina", "medida": "un", "description": "Congelada - Peça Inteira", "preço": 16.97, "img": "https://api.cndr.me/images/png/10162.png"}
-   ]
+   ];
+   login = false;
+
+   constructor(private loginService: LoginService, private _snackBar: MatSnackBar){}
+
+   logar(){
+    let result = this.loginService.login();
+    if (result['sucess']){
+      this.login = result['sucess'];
+      this._snackBar.open(result['message']," ", {
+        duration: 2000,
+      });
+    }
+   }
 
 }
