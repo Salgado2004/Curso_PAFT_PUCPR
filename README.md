@@ -3,6 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
 
 Atividades realizadas para o Programa de Atração e Formação de Talentos da PUCPR na disciplina de Angular
+**https://salgado2004.github.io/atividades_Angular_PUCPR/**
 
 <table>
     <tr>
