@@ -2,7 +2,7 @@
     <img matChipAvatar src="{{ img }}" alt="Imagem do produto"/>
     Quantidade: {{ quantidade }}<br>
     {{ preco | money }}
-    <button matChipRemove>
+    <button matChipRemove (click)="removeItem()">
       <mat-icon>cancel</mat-icon>
     </button>
 </mat-chip>

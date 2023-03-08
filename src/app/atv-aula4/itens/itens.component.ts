@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { GlobalEventEmitterService } from '../global-event-emitter.service';
 
 @Component({
   selector: 'app-itens',
@@ -17,5 +18,9 @@ export class ItensComponent {
     this.img = this.item['img'];
     this.preco = String(this.item['preço total']);
     this.quantidade = this.item['quantidade'];
+  }
+
+  removeItem(){
+    GlobalEventEmitterService.get('removeItem').emit(this.item);
   }
 }

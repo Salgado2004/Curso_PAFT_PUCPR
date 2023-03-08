@@ -25,7 +25,7 @@ export class ProdutoComponent {
   }
 
   desativarButton(){
-    return this.quantidade == 0 ? true:false
+    return this.quantidade <= 0 ? true:false
   }
 
   addCarrinho(){

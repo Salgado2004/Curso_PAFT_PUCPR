@@ -49,6 +49,8 @@ header .title{
     overflow-y: scroll;
 }
 
+
+
 @media (max-height: 650px) {
     body{
         height: 75%;
