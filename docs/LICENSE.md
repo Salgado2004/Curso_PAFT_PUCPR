@@ -1,11 +1,11 @@
-@angular/animations
+### @angular/animations
 MIT
 
-@angular/cdk
+### @angular/cdk
 MIT
 The MIT License
 
-Copyright (c) 2023 Google LLC.
+Copyright &copy; 2023 Google LLC.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,6 +25,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+---
 
 @angular/common
 MIT
@@ -39,7 +40,7 @@ MIT
 MIT
 The MIT License
 
-Copyright (c) 2023 Google LLC.
+Copyright &copy; 2023 Google LLC.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -65,6 +66,8 @@ MIT
 
 @angular/router
 MIT
+
+---
 
 rxjs
 Apache-2.0
@@ -256,7 +259,7 @@ Apache-2.0
     same "printed page" as the copyright notice for easier
     identification within third-party archives.
 
- Copyright (c) 2015-2018 Google, Inc., Netflix, Inc., Microsoft Corp. and contributors
+ Copyright &copy; 2015-2018 Google, Inc., Netflix, Inc., Microsoft Corp. and contributors
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -274,7 +277,7 @@ Apache-2.0
 
 tslib
 0BSD
-Copyright (c) Microsoft Corporation.
+Copyright &copy; Microsoft Corporation.
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted.
@@ -291,7 +294,7 @@ zone.js
 MIT
 The MIT License
 
-Copyright (c) 2010-2022 Google LLC. https://angular.io/license
+Copyright &copy; 2010-2022 Google LLC. https://angular.io/license
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
