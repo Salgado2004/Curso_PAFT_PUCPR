@@ -1,0 +1,224 @@
+li{
+    margin: 8px;
+}
+
+/* Rota 1 */
+
+#movieList1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#movieList1 .movieCard{
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    height: 350px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 5px #000;
+}
+
+.movieCard .movieInfo{
+    padding: 8px;
+    position: relative;
+}
+
+.movieInfo .title{
+    font-size: 18pt;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.movieInfo .data{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15pt;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.movieInfo .nota{
+    font-size: 18pt;
+    font-weight: 800;
+    color: #1b6e1b;
+}
+
+.movieInfo .resumo{
+    margin-top: 0;
+    width: 290px;
+    text-align: justify;
+}
+
+.movieInfo .link{
+    position: absolute;
+    bottom: 5px;
+    font-size: 15pt;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.movieInfo .link:hover{
+    font-weight: 900;    
+}
+
+/* Rota 2 */
+#moviePage{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.movieStats{
+    display: flex;
+    width: 95%;
+    height: 250px;
+    margin-bottom: 15px;
+}
+
+.movieStats div{
+    margin-left: 10px;
+}
+
+.cast{
+    width: 95%;
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.actorCard{
+    margin: 10px;
+    border: 1px solid #000;
+    width: 275px;
+    height: 375px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.profile_pic{
+    height: 55%;
+    border-radius: 50%;
+}
+
+.actorCard table{
+    background-color: #e6e6e6;
+    width: 95%;
+}
+.actorCard table th{
+    font-size: 15pt;
+}
+
+.actorCard table tr{
+    margin: 5px;
+    font-size: 13pt;
+}
+
+.actorCard a{
+    font-size: 13pt;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.actorCard a:hover{
+    text-decoration: underline;
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    border: 8px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+/* Rota 3 */
+#actorPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.actorDetails{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin-bottom: 15px;
+}
+
+.actorDetails div{
+    width: 40%;
+    height: 90%;
+    margin: 10px;
+}
+
+.actorDetails div p{
+    text-align: justify;
+}
+
+.actorDetails table{
+    border: 1px solid #000;
+    height: 50%;
+    margin: 10px;
+    padding: 5px;
+}
+.actorDetails table td, th{
+    text-align: left;
+    padding: 5px;
+}
+
+.workedFor{
+    width: 95%;
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.workCard{
+    margin: 10px;
+    border: 1px solid #000;
+    width: 275px;
+    height: 375px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.cover{
+    height: 65%;
+}
+
+.workCard h2{
+    text-align: center;
+}
+
+.workCard p{
+    margin-top: 5px;
+}
