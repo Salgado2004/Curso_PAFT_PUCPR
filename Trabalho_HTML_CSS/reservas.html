@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Quadrivago - reservar</title>
+    <link rel="icon" type="image/png" href="imgs/icon.png">
+    <link rel="stylesheet" href="style/css/estiloGeral.css">
+    <link rel="stylesheet" href="style/css/estiloReservas.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reservas.html">Reservas</a></li>
+          <li><a href="index.html#contact">Dúvidas</a></li>
+          <li><a href="loginPage.html" style="text-decoration: underline;">Meu perfil</a></li>
+        </ul>
+        <h1 class="logo">Hotel <span>Quadrivago</span></h1>
+      </div>
+    </nav>
+    <section id="reserva">
+      <form action="pagamento.html" autocomplete="off">
+        <h1>Reservar quarto</h1>
+        <fieldset>
+            <legend><h3>Selecione a sede:</h3></legend>
+            <div class="sedesGroups">
+              <div class="sede">
+                <input type="radio" id="saoPaulo" name="sedes">
+                <label for="saoPaulo">Sede São Paulo <img src="imgs/saoPaulo.jpg" alt="saoPaulo"></label>
+              </div>
+              <div class="sede">
+                <input type="radio" id="salvador" name="sedes">
+                <label for="salvador">Sede Salvador <img src="imgs/salvador.jpg" alt="salvador"></label>
+              </div>
+              <div class="sede">
+                <input type="radio" id="montevideu" name="sedes">
+                <label for="montevideu">Sede Montevideu <img src="imgs/montevideu.jpg" alt="montevideu"></label>
+              </div>  
+              <div class="sede">
+                <input type="radio" id="miami" name="sedes">
+                <label for="miami">Sede Miami <img src="imgs/miami.jpg" alt="miami"></label>
+              </div>
+              <div class="sede">
+                <input type="radio" id="londres" name="sedes">
+                <label for="londres">Sede Londres <img src="imgs/londres.jpg" alt="londres"></label>
+              </div>
+              <div class="sede">
+                <input type="radio" id="lyon" name="sedes">
+                <label for="lyon">Sede Lyon <img src="imgs/lyon.jpg" alt="lyon"></label>
+              </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><h3>Selecione o tipo do quarto:</h3></legend>
+            <div class="quartos">
+              <select name="quarto">
+                <option>Selecione</option>
+                <option value="Solteiro">Solteiro</option>
+                <option value="Casal">Casal</option>
+                <option value="Familia">Família</option>
+                <option value="Presidencial">Presidencial</option>
+              </select>
+            </div>
+        </fieldset>
+        <fieldset>
+          <legend><h3>Informe a quantidade de pessoas:</h3></legend>
+          <div class="qtdPessoas">
+            <input type="number" name="nAdultos" placeholder="Nº de adultos">
+            <input type="number" name="nCriancas" placeholder="Nº de crianças">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><h3>Informe as datas da viagem:</h3></legend>
+          <div class="datas">
+            <div>
+              <label for="entrada">Entrada</label>
+              <input type="date" name="entrada">
+            </div>
+            <div>
+              <label for="saida">Saída</label>
+              <input type="date" name="saida">
+            </div>
+          </div>
+        </fieldset>
+        <h4>**Para concluir a reserva é necessário tem um login cadastrado</h4>
+        <button type="submit">Próximo</button>
+      </form>
+    </section>
+  </body>
+</html>
