@@ -1,0 +1,170 @@
+h1 {
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+h2 {
+  position: relative;
+  margin-left: 25%;
+  margin-top: 2%;
+  font-size: 20pt;
+}
+
+h3 {
+  position: relative;
+  margin-left: 25%;
+  margin-top: 2%;
+}
+
+.img {
+  position: relative;
+  margin-left: 25%;
+  margin-top: 5%;
+  width: 35%;
+  padding-bottom: 20%;
+  text-align: center;
+  border-radius: 10% 35% 20px 50%;
+  background: linear-gradient(135deg, #505EA5, #8264A4, #8264A4, #B1629B, #B1629B);
+}
+.img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -15px;
+  left: -8px;
+  border-radius: 10% 35% 20px 50%;
+  background-image: url("../imgs/business banking.webp");
+  background-size: cover;
+}
+
+#emprestimo form {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#emprestimo form label {
+  font-weight: 500;
+}
+#emprestimo form p {
+  visibility: hidden;
+  color: #f74040;
+  filter: drop-shadow(2px 2px 2px #000);
+}
+#emprestimo form input[type=number] {
+  font-size: 18pt;
+  font-weight: 100;
+  padding: 0.5%;
+  border-radius: 15px;
+}
+#emprestimo form button {
+  background-color: #000000;
+  color: #fffffa;
+  width: 16%;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 1.7;
+  font-size: 16pt;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 0.5%;
+}
+#emprestimo form button:hover {
+  background-color: #fffffa;
+  color: #000000;
+}
+
+.parcelasGroups {
+  display: grid;
+  width: 50%;
+  height: 20vh;
+  grid-template: repeat(auto-fit, 25%)/repeat(auto-fill, minmax(25%, 1fr));
+  grid-gap: 5%;
+}
+.parcelasGroups .parcela {
+  text-align: center;
+}
+.parcelasGroups .parcela input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.parcelasGroups .parcela input + label {
+  cursor: pointer;
+  display: block;
+  margin: 5%;
+  font-size: 15pt;
+  border-radius: 10px;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+.parcelasGroups .parcela input[type=radio]:checked + label {
+  color: #fff;
+  background-color: #000;
+}
+
+#resultado {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#resultado div {
+  margin-top: 3%;
+  border: 2px solid #000;
+  padding: 1%;
+  border-radius: 20px;
+}
+
+@media (max-height: 700px) {
+  h1 {
+    margin-top: 1%;
+  }
+  h2 {
+    margin-top: 0.5%;
+  }
+  .img {
+    margin-left: 25%;
+    margin-top: 2%;
+    width: 25%;
+    padding-bottom: 15%;
+  }
+  .img::before {
+    top: -15px;
+    left: -8px;
+  }
+  #emprestimo form {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .parcelasGroups {
+    height: 15vh;
+    grid-gap: 12%;
+  }
+  .parcelasGroups .parcela input + label {
+    margin: 3%;
+  }
+}
+@media (max-width: 800px) {
+  .img {
+    margin-top: 8%;
+    width: 50%;
+    padding-bottom: 30%;
+  }
+  .img::before {
+    top: -15px;
+    left: -8px;
+  }
+  #emprestimo form button {
+    width: 50%;
+  }
+  .parcelasGroups {
+    width: 80%;
+  }
+}/*# sourceMappingURL=emprestimoStyle.css.map */

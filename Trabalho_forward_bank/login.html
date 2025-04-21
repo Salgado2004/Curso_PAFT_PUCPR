@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forward Bank</title>
+    <link rel="icon" href="imgs/coin.png" type="image/png">
+    <link rel="stylesheet" href="style/generalStyle.css">
+    <link rel="stylesheet" href="style/loginStyle.css">
+  </head>
+  <body>
+      <h1 id="logo">Forward Bank</h1>
+      <div id="form-container">
+        <form action="login" id="LoginForm" autocomplete="off">
+          <legend>Entrar na conta</legend>
+          <label for="info">Qual informação você quer usar?</label>
+          <select id="info" required>
+            <option value="CPF">CPF</option>
+            <option value="Nome">Nome</option>
+            <option value="Email">Email</option>
+          </select>
+          <label id="idLabel" for="identification">CPF: </label>
+          <input type="text" id="identification" placeholder="CPF" required>
+          <label for="password">Senha: </label>
+          <input type="password"  id="password" placeholder="Senha" required>
+          <p id="error">Error</p>
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+
+      <script src="js/login.js"></script>
+  </body>
+</html>

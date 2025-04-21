@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forward Bank</title>
+    <link rel="icon" href="imgs/coin.png" type="image/png">
+    <link rel="stylesheet" href="style/generalStyle.css">
+    <link rel="stylesheet" href="style/emprestimoStyle.css">
+    <link rel="stylesheet" href="style/loaderStyle.css">
+
+  </head>
+  <body>
+    <h1 id="logo">Empréstimo</h1>
+    <div>
+      <div class="img">a</div>
+      <h2>Precisando de dinheiro?</h2>
+    </div> 
+    <div id="emprestimo">
+      <form action="emprestar" id="formEmprestimo">
+        <p id="error">Error</p>
+        <label>Valor total do empréstimo: </label>
+        <input id="valorEmprestimo" type="number" placeholder="R$ " required>
+        <label>Quantas parcelas?</label>
+        <div class="parcelasGroups">
+          <div class="parcela">
+            <input type="radio" id="36" name="parcelas" value="36" required>
+            <label for="36">36</label>
+          </div>
+          <div class="parcela">
+            <input type="radio" id="48" name="parcelas" value="48" required>
+            <label for="48">48</label>
+          </div>
+          <div class="parcela">
+            <input type="radio" id="60" name="parcelas" value="60" required>
+            <label for="60">60</label>
+          </div>  
+          <div class="parcela">
+            <input type="radio" id="72" name="parcelas" value="72" required>
+            <label for="72">72</label>
+          </div>
+          <div class="parcela">
+            <input type="radio" id="84" name="parcelas" value="84" required>
+            <label for="84">84</label>
+          </div>
+          <div class="parcela">
+            <input type="radio" id="96" name="parcelas" value="96" required>
+            <label for="96">96</label>
+          </div>
+        </div>
+        <button type="submit">Simular empréstimo</button>
+      </form>
+    </div>
+
+    <script src="js/emprestimo.js"></script>
+  </body>
+</html>

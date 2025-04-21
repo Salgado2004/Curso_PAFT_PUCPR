@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forward Bank</title>
+    <link rel="icon" href="imgs/coin.png" type="image/png">
+    <link rel="stylesheet" href="style/generalStyle.css">
+    <link rel="stylesheet" href="style/transferenciaStyle.css">
+  </head>
+  <body>
+    <header>
+        <h1 id="logo">Transferência</h1>
+        <h2>Saldo em conta: <span id="valor">R$0,00</span></h2>
+    </header>
+    
+    <div id="transferencia">
+      <form id="transForm" action="transfere" autocomplete="off">
+        <label>Informe o valor: </label>
+        <input type="number" placeholder="R$ " id="valorTransf" required>
+        <p id="error">Error</p>
+        <fieldset>
+            <legend>Dados de quem vai receber: </legend>
+            <label>Banco: </label>
+            <input type="text" placeholder="Banco"  id="banco" required>
+            <div>
+                <label>Agência: </label>
+                <input type="number" placeholder="0000"  id="agencia" required>
+                <label>Conta: </label>
+                <input type="text" placeholder="0000000-0"  id="conta" required>
+            </div>
+            <legend>Conclusão: </legend>
+            <div>
+                <label>Tipo de transação: </label>
+                <select id="tipoDaTransacao" required>
+                    <option>PIX</option>
+                    <option>TED</option>
+                </select>
+                <label>Pagar quando: </label>
+                <input id="dataTransacao" type="date" placeholder="DD/MM/AAAA" required>
+            </div>
+            <label>Descrição: (opcional) </label>
+            <textarea id="descricao"  placeholder="Descrição"></textarea>
+        </fieldset>
+        <button type="submit">Transferir</button>
+      </form>
+    </div>
+
+    <script src="js/saldo.js"></script>
+    <script src="js/transacoes.js"></script>
+  </body>
+</html>
