@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Axios</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="title">Random Cat Facts</h1>
+    </header>
+
+    <div id="main-content">
+        <button id="getFacts">
+            Meow 
+            <span class="material-symbols-outlined">pets</span>
+        </button>
+        <div>
+            <p id="fact"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p id="credits">Api utilizada: <a href="https://alexwohlbruck.github.io/cat-facts/docs/">https://alexwohlbruck.github.io/cat-facts/docs/</a></p>
+    </footer>
+    <script src="apiCall.js"></script>
+</body>
+</html>
