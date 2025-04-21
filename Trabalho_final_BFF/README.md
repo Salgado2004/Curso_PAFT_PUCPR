@@ -1,4 +1,4 @@
-# Projeto final Backend for Frontend
+# Projeto final Backend for Frontend  <img src="https://skillicons.dev/icons?i=flask" alt="flask">
 
 Projeto final da disciplina de Backend for Frontend do curso de Front-end ofertado pelo Programa de Atração e Formação de Talentos da PUCPR
 

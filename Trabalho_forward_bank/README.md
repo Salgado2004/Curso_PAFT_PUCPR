@@ -1,4 +1,4 @@
-# Forward Bank
+# Forward Bank  <img src="https://skillicons.dev/icons?i=js,html,css,scss" alt="JavaScript, HTML, CSS" />
 Projeto desenvolvido como atividade final da disciplina de JavaScript do curso Programa de Atração e Formação de Talentos da PUCPR
 
 **Contexto**: Internet Banking

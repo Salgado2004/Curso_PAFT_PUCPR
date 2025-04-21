@@ -1,4 +1,4 @@
-# Desafio de Python
+# Desafio de Python  <img src="https://skillicons.dev/icons?i=py" alt="python logo">
 Desafio python do Programa de Atração e Formação de Talentos da PUC-PR
 
 Esta página se apresenta como a resolução do desafio de programação proposto 

@@ -1,4 +1,4 @@
-# Aluguel de Carros
+# Aluguel de Carros  <img src="https://skillicons.dev/icons?i=flask,html,css,js" alt="flask, html, css, js logos" />
 Projeto final da disciplina de Ajax + API do curso de Front-end ofertado pelo Programa de Atração e Formação de Talentos da PUCPR 
 
 **Descrição do projeto**

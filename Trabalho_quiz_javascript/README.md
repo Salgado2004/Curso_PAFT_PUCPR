@@ -1,4 +1,4 @@
-# Quiz Javascript
+# Quiz Javascript  <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" />
 Trabalho da disciplina de Javascript do Programa de Atração e Formação de Talentos da PUC-PR<br>O objeto era por em exercício a manipulação de DOM, objects, e arrays com Javascript. O jogo conta com 18 perguntas, que são entregues de maneira aleatória em grupos de 8.
 
 <img src="assets/logo.png"/>
