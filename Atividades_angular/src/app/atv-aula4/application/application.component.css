@@ -1,0 +1,58 @@
+body{
+    position: relative;
+    border: 1px solid #696969;
+    box-shadow: 2px 2px 5px #464646;
+    width: 90%;
+    height: 50%;
+    margin: 5%;
+    overflow-y: scroll;
+}
+
+header{
+    display: flex;
+    margin: 15px;
+}
+header .title{
+    font-size: 18pt;
+    font-weight: 500;
+}
+
+#loginButton{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    padding: 5px;
+    width: 85px;
+    font-size: 13pt;
+    border: 1px solid #5f0a0a;
+    background-color: #cc3b3b;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+#loginButton:hover{
+    cursor: pointer;
+    background-color: #852929;
+    box-shadow: inset 2px 2px 5px #464646;
+}
+
+.estante_produtos{
+    padding: 5px;
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+
+
+@media (max-height: 650px) {
+    body{
+        height: 75%;
+    }
+}

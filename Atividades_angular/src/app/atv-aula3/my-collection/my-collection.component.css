@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+body{
+    position: relative;
+    border: 1px solid #696969;
+    box-shadow: 2px 2px 5px #464646;
+    width: 90%;
+    height: 50%;
+    margin: 5%;
+    overflow-y: scroll;
+}
+
+#title{
+    font-family: 'DM Serif Display', serif;
+    margin: 5px;
+    font-size: 20pt;
+}
+
+#title span{
+    color: #ffff43;
+    filter: drop-shadow(1px 1px 1px #c52f2f);
+}
+
+.itens{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+}
+.itens::-webkit-scrollbar{
+    height: 12px;
+}
+.itens::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+.itens::-webkit-scrollbar-thumb{
+    background-color: rgb(71, 71, 158);
+    border-radius: 10px;
+    border: white;
+}
+
+@media (max-height: 650px) {
+    body{
+        height: 68%;
+    }
+}

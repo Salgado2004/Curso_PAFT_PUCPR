@@ -1,0 +1,41 @@
+<mat-card class="movie-card">
+    <mat-card-header>
+      <mat-card-title>{{ movieName }} ({{ movieAno }})</mat-card-title>
+      <mat-card-subtitle>
+        <mat-chip class="movie-category">
+            {{ movieCategory }}
+        </mat-chip>
+      </mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <img src="{{ movieCover }}" alt="{{ movieName }} cover">
+      <p id="phrase">
+        "{{ moviePhrase }}"
+      </p>
+      <table>
+        <tr>
+            <th>Diretor: </th><td>{{ movieDiretor }}</td>
+        </tr>
+        <tr>
+            <th>Duração: </th><td>{{ movieDuration }}</td>
+        </tr>
+        <tr>
+            <th>Título original: </th><td>{{ movieOriginal }}</td>
+        </tr>
+        <tr>
+            <th>Situação: </th><td>{{ movieStatus }}</td>
+        </tr>
+      </table>
+      <div class="nota">
+        <h3>Nota: {{ movieNota }}</h3>
+        <mat-progress-spinner class="example-margin"
+            [color]="color"
+            [mode]="mode"
+            [value]="value"
+            diameter="75"
+            strokeWidth="8">
+        </mat-progress-spinner>
+      </div>
+    </mat-card-content>
+  </mat-card>

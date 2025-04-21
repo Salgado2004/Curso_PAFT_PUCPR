@@ -1,0 +1,49 @@
+.movie-card {
+    margin: 15px;
+    max-width: 60%;
+  }
+
+.movie-category{
+    margin: 5px;
+}
+
+.movie-card #phrase{
+    margin: 5px;
+    margin-bottom: 10px;
+    font-size: 12pt;
+}
+
+.movie-card img{
+    position: relative;
+    float: right;
+    width: 175px;
+    height: 250px;
+}
+
+.movie-card table{
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #797979;
+}
+
+.movie-card table th{
+    text-align: left;
+}
+
+.movie-card .nota{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.example-margin{
+    filter: drop-shadow(2px 2px 1px #ecab0f);
+}
+
+.movie-card .nota h3{
+    font-size: 22pt;
+    font-weight: 500;
+    filter: drop-shadow(1px 2px 1px #ecab0f);
+}

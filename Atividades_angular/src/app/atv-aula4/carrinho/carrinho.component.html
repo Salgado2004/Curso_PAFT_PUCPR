@@ -1,0 +1,16 @@
+<header>
+    <h4>Carrinho</h4> 
+    <mat-icon>shopping_cart</mat-icon>
+</header>
+<!-- <app-itens *ngFor="let iten of itens"></app-itens> -->
+<mat-chip-listbox aria-label="Produtos no carrinho">
+    <p *ngIf="items.length == 0" id="warning">Seu carrinho esta vazio</p>
+    <app-itens
+    *ngFor="let item of items"
+    [item]="item"></app-itens>
+</mat-chip-listbox>
+
+
+<footer>
+  <button id="finishButton" [disabled]="desativarButton()" (click)="finalizaCompra()">Finalizar compra</button>
+</footer>

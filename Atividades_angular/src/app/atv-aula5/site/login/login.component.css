@@ -1,0 +1,56 @@
+#main-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 95%;
+}
+
+form{
+    position: relative;
+    border: 2px double #ecab0f;
+    width: 50%;
+    height: 80%;
+    padding: 15px;
+    box-shadow: 2px 2px 5px #575656;
+}
+
+form div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+form input{
+    margin-top: 5px;
+    padding: 2px;
+    width: 75%;
+}
+
+div mat-icon{
+    position: absolute;
+    z-index: 1;
+    right: 25%;
+    top: 29px;
+    cursor: pointer;
+}
+
+div span{
+    margin-top: 2px;
+    color: #c51c1c;
+}
+
+form button{
+    position: absolute;
+    bottom: 15px;
+    background: linear-gradient( -45deg, #b57c00, #d09306, #ecab0f );
+    width: 100px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    font-size: 14pt;
+}
+
+form button:hover{
+    box-shadow: inset 2px 2px 5px #575656;
+}

@@ -1,0 +1,20 @@
+<body>
+    <header>
+        <h3>Banco de dados Online de Filmes</h3>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <a mat-menu-item routerLink="login">
+              <span>Login <mat-icon>person</mat-icon></span>
+            </a>
+            <a mat-menu-item routerLink="all">
+              <span>Todos os filmes</span>
+            </a>
+            <a mat-menu-item routerLink="categories">
+              <span>Categorias</span>
+            </a>
+          </mat-menu>
+    </header>
+    <router-outlet></router-outlet>
+</body>

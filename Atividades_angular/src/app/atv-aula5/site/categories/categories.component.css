@@ -1,0 +1,83 @@
+#content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+mat-grid-list{
+    margin: 15px;
+    width: 90%;
+}
+
+mat-grid-tile {
+  background: lightgray;
+  margin: 5px;
+}
+
+a{
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-top: 28%;
+    padding-bottom: 28%;
+    font-size: 16pt;
+    font-weight: 600;
+    transition: 1s ease-in;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    cursor: pointer;
+    border: 3px solid #696959;
+}
+
+#action:hover{
+    background-image: url(https://static.mundoeducacao.uol.com.br/mundoeducacao/2020/06/texto-epico.jpg);
+    background-size: cover;
+    color: white;
+}
+
+#adventure:hover{
+    background-image: url(https://www.opovo.com.br/_midias/jpg/2020/04/22/750x500/1_themidnightgospel-12450234.jpg);
+    background-size: cover;
+    color: white;
+}
+
+#drama:hover{
+    background-image: url(https://g3i5r4x7.rocketcdn.me/wp-content/uploads/2021/06/genero-dramatico-origem-caracteristicas-e-tipos-de-textos-2.jpg);
+    background-size: cover;
+    color: white;
+}
+
+#musical:hover{
+    background-image: url(https://cotidianosantanaemfoco.files.wordpress.com/2010/03/07072009_olodum3.jpeg);
+    background-size: cover;
+    color: white;
+}
+
+#romance:hover{
+    background-image: url(https://osmelhoreslivros.com.br/wp-content/uploads/2019/10/os-melhores-livros-de-romance.jpg);
+    background-size: cover;
+    color: white;
+}
+
+#comedy:hover{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5DPwrCjwhmW7HTPFPmSHOXhzQhHfY2H6USQ&usqp=CAU);
+    background-size: cover;
+    color: white;
+}
+
+#terror:hover{
+    background-image: url(https://segredosdomundo.r7.com/wp-content/uploads/2022/01/8-desenhos-antigos-que-te-farao-voltar-a-infancia-11.jpg);
+    background-size: cover;
+    color: white;
+}
+
+#suspense:hover{
+    background-image: url(https://img.ibxk.com.br/2021/08/18/18162856736300.jpg);
+    background-size: cover;
+    color: white;
+}
