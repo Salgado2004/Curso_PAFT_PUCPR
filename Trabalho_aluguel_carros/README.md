@@ -1,8 +1,9 @@
 # Aluguel de Carros  <img src="https://skillicons.dev/icons?i=flask,html,css,js" alt="flask, html, css, js logos" />
 Projeto final da disciplina de Ajax + API do curso de Front-end ofertado pelo Programa de Atração e Formação de Talentos da PUCPR 
 
-**Descrição do projeto**
-Crie um CRUD para aluguel de carros
+**Descrição do projeto**: Crie um CRUD para aluguel de carros
+
+**Apresentação**: [Ver no youtube](https://www.youtube.com/watch?v=3YOoY_6BsV8)
 
 O carro deverá ser cadastrado com os seguintes atributos:
 
