@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">Sobre nós</a></li>
+                <li><a href="#food">Destaques</a></li>
+                <li><a href="#food-menu">Receitas</a></li>
+                <li><a href="#testimonials">Seu espaço</a></li>
+                <li><a href="#contact">Contate-nos</a></li>
+            </ul>
+            <h1 class="logo">LS</h1>
+        </div>
+    </nav>
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">Comida do Salgado!</h1>
+            <p>muito além do sabor</p>
+            <a href="#food-menu" class="btn btn-primary">Receitas</a>
+        </div>
+    </section>
+    {% include 'sessaoAbout.html' %}
+    {% block about %}
+    
+    {% endblock %}
+
+    {% include 'sessaoWiki.html' %}
+    {% block wiki %}
+
+    {% endblock %}
+
+    {% include 'sessaoMenu.html' %}
+    {% block menu %}
+
+    {% endblock %}
+    
+    {% include 'sessaoTestimonials.html' %}
+    {% block testimonials %}
+
+    {% endblock %}
+    
+    <section id="contact">
+        <div class="contact-container container">
+            <div class="contact-img">
+                <img src="https://i.postimg.cc/1XvYM67V/restraunt2.jpg" alt="" />
+            </div>
+
+            <div class="form-container">
+                <form action="/contate-nos" method="post" autocomplete="off"> 
+                    <h2>Contate-nos</h2>
+                    <input type="text" name="nome" placeholder="Seu nome" />
+                    <input type="email" name="email" placeholder="E-Mail" />
+                    <textarea name="msg" cols="30" rows="6" placeholder="Digite sua mensagem aqui"></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <p>*Ao enviar sua mensagem, a página será atualizada</p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <h2>&copy;Leonardo Salgado</h2>
+    </footer>
+    <!-- .................../ JS Code for smooth scrolling /...................... -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% block wiki %}
+<section id="food">
+    <h2>Destaques da vez</h2>
+    <div class="food-container container">
+        {% for i in destaques %}
+        <div class="food-type">
+            <div class="img-container">
+                <img src="{{ i['pathImg'] }}" alt="error" />
+                <div class="img-content">
+                    <h3>{{ i['nome'] }}</h3>
+                    <a href="/receitas?id={{ i['idReceita'] }}" class="btn btn-primary">Ver receita</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
