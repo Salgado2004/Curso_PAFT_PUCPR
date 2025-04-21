@@ -1,0 +1,27 @@
+{% block menu %}
+<section id="food-menu">
+    <h2 class="food-menu-heading">Receitas</h2>
+    <div class="food-menu-container container">
+
+        {% for food in the_menu %}
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="{{ food['pathImg'] }}" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">{{ food['nome'] }}</h2>
+                    <p>
+                        {{ food['descricao'] }}
+                    </p>
+                    <p class="food-price">Custo: R&#x24;{{ food['preco'] }}</p>
+                    <a href="/receitas?id={{ food['idReceita'] }}">Ver receita</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <h2 class="food-menu-heading" style="font-size: 20pt;">
+        <a href="/adicionar_receita" class="btn btn-primary">Nova +</a>
+    </h2>
+    <br><br>
+</section>
+{% endblock %}
