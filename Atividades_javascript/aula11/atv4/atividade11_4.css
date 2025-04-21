@@ -1,0 +1,24 @@
+* {
+    font-family:'Times New Roman', Times, serif;
+}
+h1 {
+    font-size: 40pt;
+    background-image: linear-gradient(to right, #1FC9FD, #fc0061, #fc0061, #fc0061);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+p{
+    font-size: 15pt;
+    margin: 7px;
+}
+button {
+    background-image: linear-gradient(to bottom right, #1FC9FD, #fc0061, #fc0061);
+    color: #ffffff;
+    margin: 7px;
+    font-size: 18pt;
+    padding: 8px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
