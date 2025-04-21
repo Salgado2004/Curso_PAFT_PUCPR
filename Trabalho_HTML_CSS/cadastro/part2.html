@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Parte 2 - preferências</title>
+    <link rel="stylesheet" href="../style/css/estiloForms.css">
+  </head>
+  <body>
+    <form autocomplete="off">
+      <fieldset>
+        <legend>Suas preferências:</legend>
+        <p>Não se preocupe, você poderá editá-las depois</p>
+        <div class="form-item">
+          <label>Você viaja normalmente:</label>
+          <div class="input">
+            <select name="viagem">
+                <option>Selecione</option>
+                <option value="Trabalho">Por trabalho</option>
+                <option value="Lazer">Por lazer</option>
+                <option value="Familia">Com a família</option>
+                <option value="Outro">Outro</option>
+              </select>
+          </div>
+        </div>
+        <div class="form-item">
+          <label>Normalmente busca por quartos do tipo:</label>
+          <div>
+            <select name="quarto">
+                <option>Selecione</option>
+                <option value="Solteiro">Solteiro</option>
+                <option value="Casal">Casal</option>
+                <option value="Familia">Família</option>
+                <option value="Presidencial">Presidencial</option>
+              </select>
+          </div>
+        </div>
+        <div class="form-item">
+          <label>Possui alguma necessidade especial? Informe:</label>
+          <div>
+            <textarea name="requerimentos" cols="30" rows="2" placeholder="Requerimentos especiais..."> </textarea>
+          </div>
+        </div>
+        <div class="buttons">
+          <a href="part3.html">Próximo</a>
+          <a href="part1.html">Voltar</a>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
