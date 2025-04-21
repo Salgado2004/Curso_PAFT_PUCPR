@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aluguel de carros</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+  <link rel="icon" href="../static/assets/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../static/folhaEstilo.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <header>
+    <img src="../static/assets/logo.png" alt="logo">
+  </header>
+  <div id="dados-aluguel">
+    <div id="formulario">
+      <p>Faça sua reserva:</p>
+      <div class="data">
+        <input type="text" id="local" placeholder="Local de retirada">
+        <span class="material-symbols-outlined">where_to_vote</span>
+      </div>
+      <div class="data">
+        <input type="date" id="data" title="Insira o local primeiro" disabled>
+      </div>
+      <div class="data">
+        <input type="time" id="hora" title="Insira a data primeiro" disabled>
+      </div>
+    </div>
+    <div id="perfil">
+      <a href="/login">Login</a>
+      <span class="material-symbols-outlined">login</span>
+    </div>
+  </div>
+
+  <div class="filter">
+    <p>Ordenar por:</p>
+    <div class="container">
+      <button class="order" name="status">Disponíveis</button>
+      <button class="order" name="price">Preço</button>
+      <button class="order" name="year">Ano</button>
+    </div>
+  </div>
+
+  <section id="main-carousel" class="splide" aria-labelledby="carousel">
+    <div class="splide__arrows">
+      <button class="splide__arrow splide__arrow--prev">
+        <span class="material-symbols-outlined">arrow_left</span>
+      </button>
+      <button class="splide__arrow splide__arrow--next">
+        <span class="material-symbols-outlined">arrow_right</span>
+      </button>
+    </div>
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for car in the_cars %}
+        <li class="splide__slide">
+          <div class="slide">
+            <div class="slide__image">
+              <img src="../static/assets/{{ car['img']}}" alt="">
+            </div>
+            <div class="slide__content" aria-label="{{ car['dono']}}" aria-details="{{ car['id']}}">
+              <div class="forDono">
+                
+              </div>
+              <ul>
+                <li>Dono: {{ car['nomeDono']}}</li>
+                <li>{{ car['marca']}}</li>
+                <li>{{ car['modelo']}}</li>
+                <li>{{ car['ano']}}</li>
+                <li class="editable{{ car['id']}}">{{ car['obs']}}</li>
+                <li class="editable{{ car['id']}}">Diária: R${{ car['valor']}}</li>
+                {% if car['status'] == 1 %}
+                <li class="editable{{ car['id']}}">Disponível</li>
+                {% elif car['status'] == 2 %}
+                <li style="color: red">Alugado</li>
+                {% else %}
+                <li class="editable{{ car['id']}}" style="color: red">Em manutenção</li>
+                {% endif %}
+                <div class="editForm" id="edit{{ car['id']}}"></div>
+              </ul>
+              {% if car['status'] > 1 %}
+              <button id="rent{{ car['id']}}" class="rent" name="{{ car['id']}}" disabled>Alugar</button>
+              {% else %}
+              <button id="rent{{ car['id']}}" class="rent" name="{{ car['id']}}">Alugar</button>
+              {% endif %}
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+        <li class="splide__slide">
+          <div id="addYourCar">
+            <h2>Alugue o seu carro!</h2>
+            <p>Você pode ganhar até 25% do valor da diaria e <br>fazer a felicidade de outras pessoas</p>
+            <button id="add-car" onclick="addCar()">Alugue agora</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+      
+  <ul id="thumbnails" class="thumbnails">
+    {% for car in the_cars %}
+    <li class="thumbnail">
+      <img src="../static/assets/{{ car['img'] }}" alt="">
+    </li>
+    {% endfor %}
+    <li class="thumbnail">
+      <div id="addCar">
+        <span class="material-symbols-outlined">add_circle</span>
+      </div>
+    </li>
+  </ul>
+  <footer>
+    <p>&copy; Leonardo Salgado | Image by <a href="https://www.freepik.com/free-vector/flat-car-collection-with-side-view_1505021.htm#query=car&position=19&from_view=keyword" target="_blank">Freepik</a></p>
+  </footer>
+  <script src="../static/generalFunctions.js"></script>
+  <script src="../static/slider.js"></script>
+</body>
+</html>

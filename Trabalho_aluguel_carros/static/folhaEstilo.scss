@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;500;600;700&display=swap');
+
+$color1: #53679b;
+$color2: #3b4b75;
+$color3: #353e55;
+$color4: #1e232e;
+$color5: #484957;
+$color6: #202020;
+$color7: #c0c6d4;
+$color8: #F2E9D8;
+
+$font1: 'Roboto Slab', serif;
+
+@mixin buttonPack1{
+    font-size: 14pt;
+    font-family: $font1;
+    outline: none;
+    border: 1px solid $color6;
+    border-radius: 5px;
+    background-color: #59f759;
+
+    &:hover{
+        background-color: #1e6d1e;
+        cursor: pointer;
+    }
+}
+
+@mixin buttonPack2{
+    font-family: $font1;
+    font-weight: 400;
+    background-color: #d33838;
+    color: $color8;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+    &:hover{
+        background-color: #6e2222;
+        cursor: pointer;
+    }
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: linear-gradient($color1, $color2, $color3);
+    box-shadow: 0px 3px 3px $color4;
+    img{
+        height: 150px;
+        margin: auto;
+    }
+}
+
+#dados-aluguel{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    #formulario{
+        display: flex;
+        justify-content: space-around;
+        width: 65%;
+        background-color: $color3;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0px 3px 3px $color4;
+
+        p{
+            margin: 15px;
+            color: $color7;
+            font-family: $font1;
+            font-size: 14pt;
+        }
+
+        .data{
+            background-color: $color7;
+            margin: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+
+            input{
+                font-family: $font1;
+                font-size: 14pt;
+                background: transparent;
+                border: none;
+                outline: none;
+
+                &:disabled{
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    #perfil{
+        font-family: $font1;
+        font-size: 16pt;
+        position: absolute;
+        margin: 15px;
+        right: 0;
+        display: flex;
+        align-items: center;
+
+        a{
+            text-decoration: none;
+            color: black;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        .options{
+            position: relative;
+            float: right;
+            font-size: 12pt;
+        }
+
+        #logout{
+            position: relative;
+            float: right;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            @include buttonPack2();
+        }
+    }
+}
+
+.filter{
+    font-family: $font1;
+    margin-top: 1em;
+    margin-left: 15px;
+    margin-bottom: 1em;
+    p{
+        color: #969696;
+        font-size: 15pt;
+        margin-bottom: .5em;
+    }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        .order{
+            font-family: $font1;
+            width: 150px;
+            padding: 7px 0;
+            background-color: $color5;
+            color: $color8;
+            text-align: center;
+            border-radius: 10px;
+            margin: 10px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+
+            &:hover{
+                font-weight: 500;
+                color: $color6;
+                background-color: $color7;
+            }
+        }
+    }
+}
+
+.splide__track{
+    margin-top: 2rem;
+
+    .splide__slide{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15rem;
+    
+        .slide{
+            display: flex;
+            width: 60%;
+            padding: 10px;
+    
+            .slide__image{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 60%;
+    
+                img{
+                    height: 90%;
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+            .slide__content{
+                font-family: $font1;
+                width: 40%;
+                border-radius: 10px;
+                background-color: $color7;
+                border: 2px solid $color2;
+                box-shadow: 3px 3px 10px $color6;
+
+                .forDono{
+                    position: relative;
+                    width: fit-content;
+                    float: right;
+                    padding: 5px;
+                    z-index: 1;
+                    border-radius: 10px;
+
+                    button{
+                        padding: 2px;
+                        outline: none;
+                        border: 2px solid $color3;
+                        background-color: transparent;
+                        border-radius: 5px;
+
+                        &:hover{
+                            background-color: $color1;
+                            color: $color8;
+                            cursor: pointer;
+                        }
+
+                    }
+                }
+
+                ul{
+                    margin-top: 10px;
+                    margin-left: 10px;
+                    font-size: 12pt;
+                    list-style: none;
+
+                    li{
+                        margin-bottom: 3px;
+                    }
+                }
+
+                .editForm{
+                    input{
+                        width: 75px;
+                        background-color: $color8;
+                        border: 1px solid $color4;
+                        border-radius: 5px;
+                        font-family: $font1;
+                        outline: none;
+                        padding-left: 2px;
+                    }
+
+                    select{
+                        background-color: $color8;
+                        border: 1px solid $color4;
+                        border-radius: 5px;
+                        font-family: $font1;
+                        outline: none;
+                        padding-left: 2px;
+                    }
+
+                    #edit{
+                        @include buttonPack1();
+                    }
+                    #cancel{
+                        @include buttonPack2();
+                    }
+                }
+
+                .rent{
+                    float: right;
+                    margin-bottom: 5px;
+                    margin-right: 5px;
+                    font-size: 14pt;
+                    padding: 3px;
+                    @include buttonPack1();
+                }
+            }
+    
+        }
+
+        #addYourCar{
+            width: 50%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+            background-color: $color7;
+            border: 2px solid $color2;
+            box-shadow: 3px 3px 10px $color6;
+            font-family: $font1;
+
+            h2{
+                font-size: 18pt;
+                color: $color1;
+            }
+            p{
+                font-size: 14pt;
+                text-align: center;
+            }
+
+            button{
+                padding: 3px;
+                @include buttonPack1()
+            }
+        }
+    }
+}
+
+
+.thumbnails {
+    display: flex;
+    margin: 1rem auto 0;
+    padding: 0;
+    justify-content: center;
+
+    .thumbnail {
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        list-style: none;
+        margin: 0 0.2rem;
+        transition: 0.4s;
+        cursor: pointer;
+        opacity: 0.3;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+        #addCar{
+            width: 50%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &.is-active {
+            opacity: 1;
+            transform: scale(1.1);
+        }  
+    }
+}
+
+footer{
+    position: absolute;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+	text-align: center;
+    font-size: 18px;
+    font-family: $font1;
+    font-weight: 100;
+    letter-spacing: 1.1;
+    background-color: $color6;
+    color: $color5;
+
+    a{
+        text-decoration: none;
+        color: $color5;
+
+        &:hover{
+            color: $color8;
+        }
+    }
+}
+
+#Title{
+    margin: 35px;
+    font-family: $font1;
+    font-size: 25pt;
+}
+
+#contentForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    form{
+        font-family: $font1;
+        background-color: $color1;
+        padding: 25px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        div{
+            margin-bottom: 15px;
+
+            label{
+                font-size: 14pt;
+            }
+
+            input{
+                background-color: $color7;
+                border: 1px solid $color4;
+                border-radius: 5px;
+                padding: 3px;
+                font-size: 13pt;
+                font-family: $font1;
+                font-weight: 300;
+                outline: none;
+            }
+        }
+
+        button{
+            margin-top: 10px;
+            padding: 3px;
+            @include buttonPack1()
+        }
+
+        #error{
+            margin-top: 10px;
+            font-size: 13pt;
+            color: #d33838;
+            visibility: hidden;
+            filter: drop-shadow(1px 1px 0px $color6);
+        }
+    }
+
+    > div{
+        margin-top: 8px;
+        margin-bottom: 10px;
+
+        #noSign{
+            padding: 5px;
+            font-family: $font1;
+
+            a{
+                color: $color3;
+                text-decoration: none;
+
+                &:hover{
+                    color: $color1;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+#add-new-car{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    form{
+        background-color: $color7;
+        border: 2px solid $color4;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 50px;
+        
+        width: 60%;
+
+        div{
+            width: 100%;
+            display: flex;
+
+            #dados-carro{
+                padding: 10px;
+                width: 50%;
+
+                fieldset{
+                    width: 100%;
+                    border-radius: 5px;
+                    border: 1px solid $color2;
+                    font-family: $font1;
+                    display: flex;
+                    flex-direction: column;
+
+                    legend{
+                        margin: 3px;
+                        font-size: 14pt;
+                        color: $color1;
+                    }
+
+                    div{
+                        display: flex;
+                        align-items: center;
+                        margin: 5px;
+
+                        input{
+                            margin-left: 5px;
+
+                            &[type="text"]{
+                                font-family: $font1;
+                                border: 1px solid $color2;
+                                border-radius: 5px;
+                                padding: 2px;
+                                outline: none;
+                                background-color: $color8;
+                            };
+
+                            &[type="range"]{
+                                -webkit-appearance: none;
+                                background-color: $color8;
+                                border: 1px solid $color2;
+                                outline: none;
+                                height: 8px;
+                                border-radius: 15px; 
+
+                                &::-webkit-slider-thumb {
+                                    -webkit-appearance: none;
+                                    appearance: none;
+                                    width: 20px;
+                                    height: 15px;
+                                    border-radius: 50%; 
+                                    background: $color3;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #img-carro{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 10px;
+                width: 50%;
+
+                legend{
+                    font-family: $font1;
+                    font-size: 14pt;
+                    color: $color1;
+                }
+
+                div{
+                    margin-top: 10px;
+
+                    input[type=radio]{
+                        display:none;
+
+                        &:checked + label{
+                            border: 1px solid $color2;
+
+                            img{
+                                transform: scale(1.1);
+                            }
+                        }
+
+                    }
+
+                    label{
+                        height: 65px;
+                        border-radius: 5px;
+
+                        img{
+                            height: 100%;
+                        }
+
+                        &:hover{
+                            cursor: pointer;
+                            filter: brightness(120%);
+                        }
+                    }
+                }
+            }
+        }
+        button{
+            padding: 3px;
+            @include buttonPack1();
+        }
+        
+    }
+}
+
+@media (max-height: 755px) {
+    footer{
+        position: relative;
+    }
+}
